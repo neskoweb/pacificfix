@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Tech Repair</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pacific Tech Repair</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Appliance Repair</h3>
+            <p>Professional repair of washing machines, refrigerators, and other appliances.</p>
+        </div>
+        <div class="service">
+            <h3>Electrical Work</h3>
+            <p>Installation and maintenance of electrical systems, outlets, and lighting.</p>
+        </div>
+        <div class="service">
+            <h3>Plumbing Services</h3>
+            <p>Pipe repairs, installation of plumbing equipment, and maintenance of water systems.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Pacific Tech Repair is a company with years of experience in repair and maintenance. We pride ourselves on our reputation and the quality of our work.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submitForm" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Your Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Description of Request</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Phone: (206) 730-2055</p>
+        <p>Email: neskoweb@gmail.com</p>
+    </footer>
+</body>
+</html>
