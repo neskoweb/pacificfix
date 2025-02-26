@@ -1,97 +1,67 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Tech Repair</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 1em 0;
-  width: 100%;
-  text-align: center;
-}
+    <header>
+        <h1>Pacific Tech Repair</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  max-width: 800px;
-  width: 100%;
-  padding: 2em 0;
-  text-align: left; /* Выравнивание текста влево */
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.service {
-  margin-bottom: 1.5em;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left; /* Выравнивание текста в форме */
-}
-
-label {
-  font-weight: bold;
-}
-
-input, textarea {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 100%;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #333;
-  color: white;
-  width: 100%;
-}
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Electrical</h3>
+            <p>
+                • Replacing and installing outlets, switches, and light fixtures<br>
+                • Connecting household appliances (dishwashers, washing machines)<br>
+                • Minor electrical repairs (excluding panel replacements and new wiring)
+            </p>
+        </div>
+        <div class="service">
+            <h3>Plumbing</h3>
+            <p>
+                • Replacing and repairing faucets, showerheads, and toilets<br>
+                • Fixing minor leaks<br>
+                • Installing kitchen sinks and bathroom vanities<br>
+                • Cleaning and replacing P-traps and flexible hoses
+            </p>
+        </div>
+        <div class="service">
+            <h3>Minor Repairs & Finishing Work</h3>
+            <p>
+                • Interior wall and ceiling painting<br>
+                • Patching holes and cracks in walls<br>
+                • Replacing and repairing baseboards and moldings<br>
+                • Installing curtain rods, shelves, and TV mounts
+            </p>
+        </div>
+        <div class="service">
+            <h3>Doors & Windows</h3>
+            <p>
+                • Adjusting doors, replacing hinges and handles<br>
+                • Fixing squeaky doors and gaps<br>
+                • Replacing locks and installing door closers
+            </p>
+        </div>
+        <div class="service">
+            <h3>Furniture Assembly & Installation</h3>
+            <p>
+                • Assembling and installing furniture (IKEA, Wayfair, etc.)<br>
+                • Mounting kitchen cabinets (without custom fabrication or cutting)<br>
+                • Installing wall-mounted shelves and storage units
+            </p>
+        </div>
+        <div class="service">
+            <h3>Home Maintenance 
