@@ -1,30 +1,27 @@
 /* Основные стили */
 body {
-    font-family: 'Roboto', sans-serif; /* Современный шрифт */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7; /* Светлый фон с лёгким оттенком серого */
-    color: #2c3e50; /* Темный цвет текста для хорошей контрастности */
+    background-color: #f1f1f1; /* Легкий серый фон */
+    color: #333; /* Темно-серый цвет для текста */
 }
-
-/* Шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Импорт шрифта */
 
 /* Стили для шапки */
 header {
-    background-color: #1abc9c; /* Современный зеленовато-голубой цвет */
+    background-color: #2c3e50; /* Темно-синий цвет */
     color: white;
     padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #16a085; /* Тонкая линия снизу для контраста */
+    border-bottom: 4px solid #34495e; /* Контрастная линия снизу */
 }
 
 header h1 {
     margin: 0;
     font-size: 3em;
-    color: #ffffff; /* Белый для текста */
-    text-transform: uppercase; /* Все буквы в верхний регистр */
-    letter-spacing: 2px; /* Пространство между буквами */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-weight: 500;
 }
 
@@ -42,19 +39,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #bdc3c7; /* Светло-серый для ссылок */
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
 }
 
 nav ul li a:hover {
-    color: #f39c12; /* Желтый цвет при наведении */
+    color: #3498db; /* Синий цвет при наведении */
 }
 
 /* Стиль для главного раздела */
 #intro {
-    background-color: #3498db; /* Синий цвет */
+    background-color: #3498db; /* Спокойный синий */
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -73,8 +70,9 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+/* Кнопка */
 .cta-button {
-    background-color: #f39c12; /* Оранжевая кнопка */
+    background-color: #3498db; /* Синий для кнопки */
     color: white;
     padding: 15px 30px;
     font-size: 1.3em;
@@ -88,8 +86,8 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #e67e22; /* Более темный оранжевый */
-    transform: translateY(-5px); /* Легкий подъем кнопки при наведении */
+    background-color: #2980b9; /* Темно-синий при наведении */
+    transform: translateY(-5px);
 }
 
 /* Стили для секций */
@@ -123,7 +121,7 @@ section h2 {
 
 .service h3 {
     font-size: 2em;
-    color: #1abc9c;
+    color: #16a085; /* Изумрудно-зеленый */
     margin-bottom: 15px;
 }
 
@@ -134,7 +132,7 @@ section h2 {
 
 .service ul li {
     font-size: 1.2em;
-    color: #7f8c8d;
+    color: #7f8c8d; /* Серый для текста */
     margin-bottom: 10px;
 }
 
@@ -201,7 +199,7 @@ footer {
 }
 
 footer a {
-    color: #f39c12;
+    color: #f39c12; /* Ярко-желтый для ссылок */
     text-decoration: none;
     font-weight: 500;
 }
@@ -212,14 +210,14 @@ footer a:hover {
 
 /* Кнопка "Back to Top" */
 button.back-to-top {
-    background-color: #e67e22;
+    background-color: #e67e22; /* Оранжево-желтый */
     color: white;
     border: none;
     padding: 15px 30px;
     cursor: pointer;
     border-radius: 10px;
     position: fixed;
-    bottom: 80px; /* Поднято на 60px, чтобы не перекрывать другие кнопки */
+    bottom: 20px;
     right: 20px;
     font-size: 1.5em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -227,27 +225,6 @@ button.back-to-top {
 }
 
 button.back-to-top:hover {
-    background-color: #d35400;
-    transform: translateY(-5px);
-}
-
-/* Кнопка "Send Request" */
-form button {
-    background-color: #3498db;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-    position: relative;
-    bottom: 20px; /* Немного отступает от формы */
-}
-
-form button:hover {
-    background-color: #2980b9;
+    background-color: #d35400; /* Более темный оранжевый */
     transform: translateY(-5px);
 }
