@@ -188,3 +188,19 @@ button {
 button:hover {
     background-color: #d35400;
 }
+
+/* Стили для кнопки отправки формы */
+form button {
+    background-color: #3498db; /* Синяя кнопка */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Сделаем отступ, чтобы кнопка не прилипала к форме */
+}
+
+form button:hover {
+    background-color: #2980b9; /* Темно-синий при наведении */
+}
