@@ -1,28 +1,14 @@
-/* Общие стили */
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-h1, h2, h3 {
-    color: #2c3e50;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    background-color: #f4f4f4;
 }
 
 /* Стили для шапки */
 header {
-    background-color: #2c3e50;
+    background-color: #34495e; /* Темно-серый цвет */
     color: white;
     padding: 20px;
     text-align: center;
@@ -30,163 +16,171 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
+/* Навигация */
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 20px 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
-    font-size: 16px;
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
-/* Стили для секции Введение */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стиль для главного раздела */
 #intro {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #3498db;
+    background-color: #27ae60; /* Зеленый цвет */
     color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 #intro h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
 }
 
 #intro p {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto 20px;
 }
 
 .cta-button {
-    display: inline-block;
-    background-color: #2c3e50;
+    background-color: #16a085; /* Более темный зеленый */
     color: white;
-    padding: 15px 25px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .cta-button:hover {
-    background-color: #34495e;
+    background-color: #1abc9c; /* Еще темнее зеленый */
 }
 
-/* Стили для секции Услуги */
-#services {
-    padding: 50px 20px;
-    background-color: white;
-    text-align: center;
+/* Стили для секций */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+section h2 {
+    font-size: 2.5em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Стиль для списка услуг */
 .service {
-    margin-bottom: 30px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .service h3 {
     font-size: 1.8em;
-    margin-bottom: 10px;
+    color: #2c3e50;
 }
 
 .service ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .service ul li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #7f8c8d;
 }
 
-/* Стили для секции О нас */
-#about {
-    padding: 50px 20px;
-    background-color: #ecf0f1;
-    text-align: center;
+/* Стили для формы */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#about p {
+form label {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
     font-size: 1.2em;
 }
 
-/* Стили для секции Контакты */
-#contact {
-    padding: 50px 20px;
-    background-color: white;
-}
-
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: grid;
-    gap: 20px;
-}
-
-#contact label {
-    font-size: 1.1em;
-}
-
-#contact input, #contact textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact button {
-    background-color: #3498db;
+form button {
+    background-color: #27ae60; /* Зеленая кнопка */
     color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 1.2em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-#contact button:hover {
-    background-color: #2980b9;
+form button:hover {
+    background-color: #16a085; /* Более темный зеленый */
 }
 
-/* Стили для подвала */
+/* Подвал */
 footer {
     background-color: #2c3e50;
     color: white;
-    text-align: center;
     padding: 20px;
-}
-
-footer p {
-    margin: 5px 0;
+    text-align: center;
 }
 
 footer a {
-    color: white;
+    color: #1abc9c;
+    text-decoration: none;
 }
 
-/* Кнопка "Наверх" */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка "Back to Top" */
 button {
+    background-color: #16a085;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #3498db;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #1abc9c;
 }
