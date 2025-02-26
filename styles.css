@@ -87,3 +87,11 @@ footer {
   background-color: #333;
   color: white;
 }
+.description {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
