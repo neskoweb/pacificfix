@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif; /* Современный шрифт */
     margin: 0;
     padding: 0;
-    background-color: #2d3436; /* Темный фон */
+    background-color: #2f363d; /* Темный фон */
     color: #dfe6e9; /* Светлый текст */
 }
 
@@ -12,7 +12,7 @@ body {
 
 /* Стили для шапки */
 header {
-    background-color: #1e272e; /* Темно-серый оттенок */
+    background-color: #212f36; /* Темно-серый оттенок */
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
@@ -49,12 +49,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff7675; /* Мягкий розово-красный для акцента */
+    color: #ff7f50; /* Мягкий оранжево-красный для акцента */
 }
 
 /* Стиль для главного раздела */
 #intro {
-    background-color: #34495e; /* Темно-синий оттенок */
+    background-color: #2a3d4e; /* Темно-синий оттенок */
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: #ff7675; /* Мягкий розово-красный */
+    background-color: #ff7f50; /* Мягкий оранжево-красный */
     color: white;
     padding: 15px 30px;
     font-size: 1.3em;
@@ -88,7 +88,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #ff4d4d; /* Более яркий розово-красный */
+    background-color: #ff6f40; /* Более яркий оранжево-красный */
     transform: translateY(-5px);
 }
 
@@ -108,7 +108,7 @@ section h2 {
 
 /* Стиль для списка услуг */
 .service {
-    background-color: #2c3e50; /* Темно-серый фон */
+    background-color: #34495e; /* Темно-серый фон */
     margin: 30px 0;
     padding: 30px;
     border-radius: 12px;
@@ -123,7 +123,7 @@ section h2 {
 
 .service h3 {
     font-size: 2em;
-    color: #ff7675; /* Розово-красный для выделения */
+    color: #ff7f50; /* Оранжево-красный для выделения */
     margin-bottom: 15px;
 }
 
@@ -140,7 +140,7 @@ section h2 {
 
 /* Стили для формы */
 form {
-    background-color: #2c3e50;
+    background-color: #34495e;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -169,13 +169,13 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: #ff7675; /* Розово-красный при фокусе */
+    border-color: #ff7f50; /* Оранжево-красный при фокусе */
     outline: none;
 }
 
 /* Кнопка отправки формы */
 form button {
-    background-color: #ff7675;
+    background-color: #ff7f50;
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -188,20 +188,20 @@ form button {
 }
 
 form button:hover {
-    background-color: #ff4d4d;
+    background-color: #ff6f40;
     transform: translateY(-5px);
 }
 
 /* Подвал */
 footer {
-    background-color: #1e272e;
+    background-color: #212f36;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 footer a {
-    color: #ff7675;
+    color: #ff7f50;
     text-decoration: none;
     font-weight: 500;
 }
@@ -212,7 +212,7 @@ footer a:hover {
 
 /* Кнопка "Back to Top" */
 button.back-to-top {
-    background-color: #ff4d4d;
+    background-color: #ff6f40;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -227,6 +227,6 @@ button.back-to-top {
 }
 
 button.back-to-top:hover {
-    background-color: #ff1a1a;
+    background-color: #ff4d4d;
     transform: translateY(-5px);
 }
