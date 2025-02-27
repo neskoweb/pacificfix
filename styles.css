@@ -11,14 +11,17 @@ body {
 
 /* Стили для хедера */
 header {
-    background-image: url('https://neskoweb.github.io/pacificfix/logo.png'); /* Ссылка на баннер */
-    background-size: cover; /* Сделать изображение фоном, растягивая его */
-    background-position: center; /* Центрировать изображение */
+    background-image: url('https://raw.githubusercontent.com/neskoweb/pacificfix/main/logo.png'); /* Ссылка на изображение */
+    background-size: cover; /* Изображение будет растягиваться на весь блок */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+    height: 600px; /* Устанавливаем высоту хедера, чтобы соответствовать изображению */
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
-    position: relative; /* Это важно для правильного позиционирования контента */
+    border-bottom: 3px solid #636e72; /* Тонкая линия снизу */
+    position: relative;
+
 }
 
 header h1 {
