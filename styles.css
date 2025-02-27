@@ -7,6 +7,7 @@ body {
     padding: 0;
     background-color: #2f363d; /* Темный фон */
     color: #dfe6e9; /* Светлый текст */
+    box-sizing: border-box; /* Это поможет учитывать padding и margin */
 }
 
 /* Стили для хедера */
@@ -21,9 +22,7 @@ header {
     text-align: center;
     border-bottom: 3px solid #636e72; /* Тонкая линия снизу */
     position: relative;
-
-
-
+    box-sizing: border-box; /* Учитываем padding в общей высоте */
 }
 
 header h1 {
@@ -59,7 +58,6 @@ nav ul li a:hover {
 }
 
 /* Стили для главного раздела */
-/* Стили для главного раздела */
 #intro {
     background-color: #2f363d; /* Темный фон, гармонирует с цветом фона сайта */
     height: 100vh; /* Устанавливаем высоту на весь экран */
@@ -71,41 +69,6 @@ nav ul li a:hover {
     text-align: center;
     padding: 0; /* Убираем отступы */
     margin: 0; /* Убираем внешние отступы */
-}
-
-
-#intro h2 {
-    font-size: 3em;
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Добавление тени для текста */
-}
-
-#intro p {
-    font-size: 1.3em;
-    max-width: 700px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для текста */
-}
-
-.cta-button {
-    background-color: #ff7f50; /* Мягкий оранжево-красный */
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.3em;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background-color: #ff6f40; /* Более яркий оранжево-красный */
-    transform: translateY(-5px);
 }
 
 /* Стили для секций */
