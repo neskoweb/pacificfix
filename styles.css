@@ -57,7 +57,6 @@ nav ul li a:hover {
 
 /* Стили для главного раздела */
 #intro {
-    height: 100vh; /* Устанавливаем высоту на весь экран */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,6 +67,10 @@ nav ul li a:hover {
     margin: 0; /* Убираем внешние отступы */
 }
 
+.intro-content {
+    text-align: center;
+
+}
 #intro h2 {
     font-size: 3em;
     font-weight: 500;
