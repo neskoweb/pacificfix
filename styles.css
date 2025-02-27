@@ -15,9 +15,9 @@ header {
     background-size: cover; /* Изображение будет растягиваться на весь блок */
     background-position: center; /* Центрируем изображение */
     background-repeat: no-repeat; /* Чтобы изображение не повторялось */
-    height: 600px; /* Устанавливаем высоту хедера, чтобы соответствовать изображению */
+    height: 600px; /* Увеличиваем высоту хедера */
     color: #ffffff;
-    padding: 30px 20px;
+    padding: 60px 20px; /* Увеличиваем отступы сверху и снизу */
     text-align: center;
     border-bottom: 3px solid #636e72; /* Тонкая линия снизу */
     position: relative;
