@@ -60,7 +60,6 @@ nav ul li a:hover {
 
 /* Стили для главного раздела */
 #intro {
-    background-image: url('https://github.com/neskoweb/pacificfix/blob/main/logo.png?raw=true');
     background-size: cover; /* Масштабирование изображения на весь экран */
     background-position: center center; /* Центрирование изображения */
     background-attachment: fixed; /* Фиксирование изображения при прокрутке */
