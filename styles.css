@@ -1,6 +1,6 @@
 /* Основные стили */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Современный шрифт */
     margin: 0;
     padding: 0;
     background-color: #2f363d; /* Темный фон */
@@ -8,15 +8,15 @@ body {
 }
 
 /* Шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Импорт шрифта */
 
 /* Стили для шапки */
 header {
-    background-color: #212f36; 
+    background-color: #212f36; /* Темно-серый оттенок */
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #636e72;
+    border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
 }
 
 header h1 {
@@ -28,38 +28,53 @@ header h1 {
     font-weight: 500;
 }
 
-/* Баннер */
-#banner {
-    background-color: #212f36;
-    color: #ffffff;
-    padding: 100px 20px;
+/* Навигация */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
     text-align: center;
-    background-image: url('your-banner-image.jpg'); /* Замените на URL изображения */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: #dfe6e9;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #ff7f50; /* Мягкий оранжево-красный для акцента */
+}
+
+/* Стиль для главного раздела */
+#intro {
+    background-color: #2a3d4e; /* Темно-синий оттенок */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
     border-radius: 10px;
 }
 
-#banner h1 {
-    font-size: 3.5em;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+#intro h2 {
+    font-size: 3em;
+    font-weight: 500;
 }
 
-#banner p {
-    font-size: 1.5em;
+#intro p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 20px;
     line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-#banner .cta-button {
-    background-color: #ff7f50;
+.cta-button {
+    background-color: #ff7f50; /* Мягкий оранжево-красный */
     color: white;
     padding: 15px 30px;
     font-size: 1.3em;
@@ -72,8 +87,8 @@ header h1 {
     transition: all 0.3s ease;
 }
 
-#banner .cta-button:hover {
-    background-color: #ff6f40;
+.cta-button:hover {
+    background-color: #ff6f40; /* Более яркий оранжево-красный */
     transform: translateY(-5px);
 }
 
@@ -91,8 +106,9 @@ section h2 {
     font-weight: 600;
 }
 
+/* Стиль для списка услуг */
 .service {
-    background-color: #34495e;
+    background-color: #34495e; /* Темно-серый фон */
     margin: 30px 0;
     padding: 30px;
     border-radius: 12px;
@@ -107,7 +123,7 @@ section h2 {
 
 .service h3 {
     font-size: 2em;
-    color: #ff7f50;
+    color: #ff7f50; /* Оранжево-красный для выделения */
     margin-bottom: 15px;
 }
 
@@ -120,6 +136,78 @@ section h2 {
     font-size: 1.2em;
     color: #dfe6e9;
     margin-bottom: 10px;
+}
+
+/* Стили для формы */
+form {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+form label {
+    font-size: 1.3em;
+    color: #dfe6e9;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #7f8c8d;
+    border-radius: 6px;
+    font-size: 1.2em;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff7f50; /* Оранжево-красный при фокусе */
+    outline: none;
+}
+
+/* Кнопка отправки формы */
+form button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff6f40;
+    transform: translateY(-5px);
+}
+
+/* Подвал */
+footer {
+    background-color: #212f36;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Кнопка "Back to Top" */
@@ -141,22 +229,4 @@ button.back-to-top {
 button.back-to-top:hover {
     background-color: #ff4d4d;
     transform: translateY(-5px);
-}
-
-/* Подвал */
-footer {
-    background-color: #212f36;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #ff7f50;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
