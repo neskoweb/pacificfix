@@ -8,7 +8,6 @@
 </head>
 <body>
 
-измени код целиком и отправь мне
     <header>
         <h1>Pacific Tech Repair</h1> <!-- Название компании -->
         <nav>
@@ -20,7 +19,8 @@
         </nav>
     </header>
 
-    <section id="intro">
+    <!-- Баннер с изображением -->
+    <section class="banner-image">
         <h2>Reliable Home Repairs & Maintenance</h2>
         <p>
             Need quick and professional repairs? Pacific Tech Repair offers top-quality electrical, plumbing, and general maintenance services. 
@@ -88,24 +88,24 @@
         <p>Pacific Tech Repair is a company with years of experience in repair and maintenance. We pride ourselves on our reputation and the quality of our work.</p>
     </section>
 
-   <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="phone">Your Phone Number</label>
-        <input type="tel" id="phone" name="phone" required>
+            <label for="phone">Your Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
 
-        <label for="message">Description of Request</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Description of Request</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-        <!-- Кнопка отправки сразу под полем для сообщения -->
-        <button type="submit">Send Request</button>
-    </form>
+            <!-- Кнопка отправки сразу под полем для сообщения -->
+            <button type="submit">Send Request</button>
+        </form>
     </section>
 
     <footer>
@@ -114,5 +114,34 @@
     </footer>
 
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back to Top</button>
+
+    <style>
+        .banner-image {
+            background-image: url('https://github.com/neskoweb/pacificfix/blob/main/logo.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Высота баннера на весь экран */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
 </body>
 </html>
