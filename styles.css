@@ -51,18 +51,27 @@ nav ul li a:hover {
     color: #ff7f50; /* Мягкий оранжево-красный для акцента */
 }
 
-/* Стиль для главного раздела */
+/* Стили для главного раздела */
 #intro {
-    background-color: #2a3d4e; /* Темно-синий оттенок */
+    background-image: url('https://github.com/neskoweb/pacificfix/blob/main/logo.png?raw=true');
+    background-size: cover; /* Масштабирование изображения на весь экран */
+    background-position: center center; /* Центрирование изображения */
+    background-attachment: fixed; /* Фиксирование изображения при прокрутке */
+    height: 100vh; /* Устанавливаем высоту на весь экран */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
-    padding: 80px 20px;
-    border-radius: 10px;
+    padding: 0; /* Убираем отступы, если они есть */
+    margin: 0; /* Убираем внешние отступы */
 }
 
 #intro h2 {
     font-size: 3em;
     font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Добавление тени для текста */
 }
 
 #intro p {
@@ -70,6 +79,7 @@ nav ul li a:hover {
     max-width: 700px;
     margin: 0 auto 20px;
     line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для текста */
 }
 
 .cta-button {
@@ -84,6 +94,7 @@ nav ul li a:hover {
     display: inline-block;
     border-radius: 8px;
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
 .cta-button:hover {
