@@ -15,13 +15,12 @@ header {
     background-size: cover; /* Сделать изображение фоном, растягивая его */
     background-position: center; /* Центрировать изображение */
     background-repeat: no-repeat; /* Избегать повторения изображения */
-    background-attachment: fixed; /* Фиксированное изображение */
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
     border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
     position: relative; /* Это важно для правильного позиционирования контента */
-    height: 600px; /* Устанавливаем высоту хедера */
+    height: 400px; /* Устанавливаем высоту хедера */
 }
 
 header h1 {
@@ -60,7 +59,6 @@ nav ul li a:hover {
 #intro {
     background-size: cover; /* Масштабирование изображения на весь экран */
     background-position: center center; /* Центрирование изображения */
-    background-attachment: fixed; /* Фиксирование изображения при прокрутке */
     height: 100vh; /* Устанавливаем высоту на весь экран */
     display: flex;
     flex-direction: column;
