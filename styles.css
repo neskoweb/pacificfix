@@ -1,3 +1,6 @@
+/* Шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Импорт шрифта */
+
 body {
     font-family: 'Roboto', sans-serif; /* Современный шрифт */
     margin: 0;
@@ -6,9 +9,7 @@ body {
     color: #dfe6e9; /* Светлый текст */
 }
 
-/* Шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Импорт шрифта */
-
+/* Стили для хедера */
 header {
     background-image: url('https://neskoweb.github.io/pacificfix/logo.png'); /* Ссылка на баннер */
     background-size: cover; /* Сделать изображение фоном, растягивая его */
@@ -21,16 +22,7 @@ header {
 }
 
 header h1 {
-    margin: 0;
-    font-size: 3em;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    position: absolute; /* Для того чтобы текст не перекрывал кнопки */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: none; /* Скрыть текст Pacific Tech Repair */
 }
 
 /* Стили для навигации */
@@ -59,8 +51,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ff7f50; /* Мягкий оранжево-красный для акцента */
-}
-
 }
 
 /* Стили для главного раздела */
