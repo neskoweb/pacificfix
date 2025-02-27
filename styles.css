@@ -7,22 +7,18 @@ body {
     padding: 0;
     background-color: #2f363d; /* Темный фон */
     color: #dfe6e9; /* Светлый текст */
-    box-sizing: border-box; /* Это поможет учитывать padding и margin */
 }
 
 /* Стили для хедера */
 header {
-    background-image: url('https://raw.githubusercontent.com/neskoweb/pacificfix/main/logo.png');
-    background-size: contain; /* Изображение будет помещаться в блок */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 400px;
+    background-image: url('https://neskoweb.github.io/pacificfix/logo.png'); /* Ссылка на баннер */
+    background-size: cover; /* Сделать изображение фоном, растягивая его */
+    background-position: center; /* Центрировать изображение */
     color: #ffffff;
-    padding: 60px 20px;
+    padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #636e72;
-    position: relative;
-
+    border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
+    position: relative; /* Это важно для правильного позиционирования контента */
 }
 
 header h1 {
@@ -59,7 +55,10 @@ nav ul li a:hover {
 
 /* Стили для главного раздела */
 #intro {
-    background-color: #2f363d; /* Темный фон, гармонирует с цветом фона сайта */
+    background-image: url('https://github.com/neskoweb/pacificfix/blob/main/logo.png?raw=true');
+    background-size: cover; /* Масштабирование изображения на весь экран */
+    background-position: center center; /* Центрирование изображения */
+    background-attachment: fixed; /* Фиксирование изображения при прокрутке */
     height: 100vh; /* Устанавливаем высоту на весь экран */
     display: flex;
     flex-direction: column;
@@ -67,8 +66,42 @@ nav ul li a:hover {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 0; /* Убираем отступы */
+    padding: 0; /* Убираем отступы, если они есть */
     margin: 0; /* Убираем внешние отступы */
+}
+
+#intro h2 {
+    font-size: 3em;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Добавление тени для текста */
+}
+
+#intro p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+.cta-button {
+    background-color: #ff7f50; /* Мягкий оранжево-красный */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #ff6f40; /* Более яркий оранжево-красный */
+    transform: translateY(-5px);
 }
 
 /* Стили для секций */
