@@ -15,12 +15,13 @@ header {
     background-size: cover; /* Изображение будет растягиваться на весь блок */
     background-position: center; /* Центрируем изображение */
     background-repeat: no-repeat; /* Чтобы изображение не повторялось */
-    height: 600px; /* Увеличиваем высоту хедера */
+    min-height: 700px; /* Минимальная высота хедера */
     color: #ffffff;
-    padding: 60px 20px; /* Увеличиваем отступы сверху и снизу */
+    padding: 100px 20px; /* Увеличиваем отступы сверху и снизу */
     text-align: center;
     border-bottom: 3px solid #636e72; /* Тонкая линия снизу */
     position: relative;
+
 
 }
 
