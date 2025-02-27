@@ -58,11 +58,9 @@ nav ul li a:hover {
 }
 
 /* Стили для главного раздела */
+/* Стили для главного раздела */
 #intro {
-    background-image: url('https://github.com/neskoweb/pacificfix/blob/main/logo.png?raw=true');
-    background-size: cover; /* Масштабирование изображения на весь экран */
-    background-position: center center; /* Центрирование изображения */
-    background-attachment: fixed; /* Фиксирование изображения при прокрутке */
+    background-color: #2f363d; /* Темный фон, гармонирует с цветом фона сайта */
     height: 100vh; /* Устанавливаем высоту на весь экран */
     display: flex;
     flex-direction: column;
@@ -70,9 +68,10 @@ nav ul li a:hover {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 0; /* Убираем отступы, если они есть */
+    padding: 0; /* Убираем отступы */
     margin: 0; /* Убираем внешние отступы */
 }
+
 
 #intro h2 {
     font-size: 3em;
