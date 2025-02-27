@@ -9,13 +9,15 @@ body {
 /* Шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Импорт шрифта */
 
-/* Стили для шапки */
 header {
-    background-color: #212f36; /* Темно-серый оттенок */
+    background-image: url('https://neskoweb.github.io/pacificfix/logo.png'); /* Ссылка на баннер */
+    background-size: cover; /* Сделать изображение фоном, растягивая его */
+    background-position: center; /* Центрировать изображение */
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
     border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
+    position: relative; /* Это важно для правильного позиционирования контента */
 }
 
 header h1 {
@@ -25,14 +27,22 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
+    position: absolute; /* Для того чтобы текст не перекрывал кнопки */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Навигация */
+/* Стили для навигации */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
     text-align: center;
+    position: absolute;
+    bottom: 20px; /* Кнопки будут располагаться ниже на фоне */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav ul li {
@@ -49,6 +59,8 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ff7f50; /* Мягкий оранжево-красный для акцента */
+}
+
 }
 
 /* Стили для главного раздела */
