@@ -19,6 +19,11 @@ header {
     text-align: center;
     border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
     position: relative; /* Это важно для правильного позиционирования контента */
+    height: 300px; /* Устанавливаем высоту хедера */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем контент по вертикали */
+    align-items: center; /* Центрируем контент по горизонтали */
 }
 
 header h1 {
