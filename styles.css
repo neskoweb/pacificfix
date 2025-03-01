@@ -63,11 +63,26 @@ nav ul li a:hover {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 0; /* Убираем отступы, если они есть */
-    margin: 0; /* Убираем внешние отступы */
-    height: 100vh; /* Высота на весь экран */
-    width: 100%; /* Полная ширина */
+    padding: 60px 20px; /* Применяем те же отступы, что и у других секций */
+    margin: 0 auto; /* Центрирование секции */
+    max-width: 1100px; /* Ограничиваем ширину, как у других секций */
     box-sizing: border-box; /* Включение padding и border в размер элемента */
+    border: 2px solid #34495e; /* Применяем рамку, как у других секций */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Тень, как у других секций */
+}
+
+#intro nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#intro nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .intro-content {
@@ -75,12 +90,6 @@ nav ul li a:hover {
     max-width: 700px;
     margin: 0 auto; /* Центрирование содержимого */
     padding: 0 20px; /* Добавляем padding для лучшего центрирования */
-}
-
-#intro nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 #intro h2 {
