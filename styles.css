@@ -78,6 +78,8 @@ nav ul li a:hover {
 
 #intro nav {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #intro h2 {
