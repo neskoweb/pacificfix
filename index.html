@@ -119,5 +119,24 @@
 
     <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back to Top</button>
 
+    <!-- Вставка JavaScript кода -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.querySelector('button.back-to-top');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) { // Показать кнопку при прокрутке более чем на 300px
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
 </body>
 </html>
