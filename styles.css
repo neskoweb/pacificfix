@@ -285,8 +285,8 @@ button.back-to-top:hover {
     }
 
     nav ul li {
-        display: block;
-        margin: 10px 0;
+        display: inline-block; /* Изменяем на inline-block для горизонтального отображения */
+        margin: 0 10px; /* Добавляем отступы между элементами */
     }
 
     #intro {
@@ -357,14 +357,5 @@ button.back-to-top:hover {
     button.back-to-top {
         padding: 10px 20px;
         font-size: 1.2em;
-    }
-
-    /* Стили для навигации в интро-секции */
-    #intro nav ul li {
-        margin: 10px 0; /* Добавляем отступы между элементами навигации */
-    }
-
-    #intro nav ul {
-        flex-direction: column; /* Размещаем элементы навигации вертикально */
     }
 }
