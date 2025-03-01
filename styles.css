@@ -248,6 +248,7 @@ footer a:hover {
 
 /* Кнопка "Back to Top" */
 button.back-to-top {
+    display: none; /* Изначально скрыта */
     background-color: #ff6f40;
     color: white;
     border: none;
