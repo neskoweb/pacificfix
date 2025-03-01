@@ -266,3 +266,91 @@ button.back-to-top:hover {
     background-color: #ff4d4d;
     transform: translateY(-5px);
 }
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+        min-height: 200px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #intro {
+        padding: 40px 10px;
+    }
+
+    #intro h2 {
+        font-size: 2.2em;
+    }
+
+    #intro p {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    section h2 {
+        font-size: 2.2em;
+    }
+
+    .service {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .service h3 {
+        font-size: 1.8em;
+    }
+
+    .service ul li {
+        font-size: 1em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form label {
+        font-size: 1.1em;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    form button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer a {
+        font-size: 0.9em;
+    }
+
+    button.back-to-top {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+}
