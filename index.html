@@ -90,9 +90,9 @@
         <p>Pacific Tech Repair is a company with years of experience in repair and maintenance. We pride ourselves on our reputation and the quality of our work.</p>
     </section>
 
-    <section id="contact">
+<section id="contact">
     <h2>Contact Us</h2>
-    <form action="/success" method="POST" netlify>
+    <form name="contact" method="POST" data-netlify="true" action="/success">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -106,11 +106,15 @@
         <textarea id="message" name="message" rows="4" required></textarea>
 
         <input type="hidden" name="_subject" value="New submission!">
+        <!-- Поле _honeypot для предотвращения спама -->
+        <div style="display:none;">
+            <input type="text" name="_honeypot">
+        </div>
 
         <!-- Кнопка отправки сразу под полем для сообщения -->
         <button type="submit">Send Request</button>
     </form>
-    </section>
+</section>
 
     <footer>
         <p>Phone: <a href="tel:+12067302055">(206) 730-2055</a></p>
