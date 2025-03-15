@@ -149,7 +149,7 @@ section h2 {
 
 /* Стиль для списка услуг */
 .service {
-    background-color: #34495e; /* Темно-серый фон */
+    background: linear-gradient(45deg, #0d1b26, #737373);
     margin: 30px 0;
     padding: 30px;
     border-radius: 12px;
