@@ -67,7 +67,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 60px 20px; /* Применяем те же отступы, что и у других секций */
-    margin: 0 auto; /* Центрирование секции */
+    margin: 20px auto; /* Центрирование секции */
     max-width: 1100px; /* Ограничиваем ширину, как у других секций */
     box-sizing: border-box; /* Включение padding и border в размер элемента */
     border-radius: 12px; /* Скругленные углы */
