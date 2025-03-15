@@ -70,7 +70,6 @@ nav ul li a:hover {
     margin: 0 auto; /* Центрирование секции */
     max-width: 1100px; /* Ограничиваем ширину, как у других секций */
     box-sizing: border-box; /* Включение padding и border в размер элемента */
-    border: 2px solid #0d1b26; /* Применяем рамку, как у других секций */
     border-radius: 12px; /* Скругленные углы */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Тень, как у других секций */
 }
@@ -181,7 +180,7 @@ section h2 {
 
 /* Стили для формы */
 form {
-    background-color: #34495e;
+    background: linear-gradient(45deg, #0d1b26, #737373);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
