@@ -59,7 +59,7 @@ nav ul li a:hover {
 
 /* Стили для главного раздела */
 #intro {
-    background-color: linear-gradient(90deg, #000000, #737373);
+    background: linear-gradient(90deg, #000000, #737373);
     display: flex;
     flex-direction: column;
     justify-content: center;
