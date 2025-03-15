@@ -163,7 +163,7 @@ section h2 {
 
 .service h3 {
     font-size: 2em;
-    color: #ff7f50; /* Оранжево-красный для выделения */
+    color: #fc8a00; /* Оранжево-красный для выделения */
     margin-bottom: 15px;
 }
 
@@ -209,13 +209,13 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: #ff7f50; /* Оранжево-красный при фокусе */
+    border-color: #fc8a00; /* Оранжево-красный при фокусе */
     outline: none;
 }
 
 /* Кнопка отправки формы */
 form button {
-    background-color: #ff7f50;
+    background-color: #fc8a00;
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -241,7 +241,7 @@ footer {
 }
 
 footer a {
-    color: #ff7f50;
+    color: #fc8a00;
     text-decoration: none;
     font-weight: 500;
 }
@@ -253,7 +253,7 @@ footer a:hover {
 /* Кнопка "Back to Top" */
 button.back-to-top {
     display: none; /* Изначально скрыта */
-    background-color: #ff6f40;
+    background-color: #fc8a00;
     color: white;
     border: none;
     padding: 15px 30px;
