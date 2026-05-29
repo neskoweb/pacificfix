@@ -12,21 +12,30 @@ body {
 /* Стили для хедера */
 header {
     background-image: url('https://neskoweb.github.io/pacificfix/logo.png'); /* Ссылка на баннер */
-    background-size: cover; /* Сделать изображение фоном, растягивая его */
-    background-position: center; /* Центрировать изображение */
-    background-repeat: no-repeat; /* Избегать повторения изображения */
+    background-size: contain;       /* Показывает целиком, НЕ обрезает */
+    background-position: center;    /* Центрировать изображение */
+    background-repeat: no-repeat;   /* Без повторов */
+    background-color: #222;         /* Цвет фона, если есть прозрачность */
     color: #ffffff;
-    padding: 30px 20px;
+    padding: 0;                     /* Или сделай 10-20px, если нужно, но не много */
     text-align: center;
-    border-bottom: 3px solid #636e72; /* Тонкая линия снизу для контраста */
-    position: relative; /* Это важно для правильного позиционирования контента */
-    min-height: 300px; /* Минимальная высота для хедера */
+    border-bottom: 3px solid #636e72;
+    min-height: 200px;              /* Достаточно для большинства баннеров */
+    max-height: 340px;              /* Можно изменить под нужную высоту */
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Адаптивная ширина */
-    box-sizing: border-box; /* Включение padding и border в размер элемента */
+}
+
+/* Адаптивная высота для мобильных */
+@media (max-width: 768px) {
+    header {
+        min-height: 120px;
+        max-height: 180px;
+        padding: 0;
+    }
 }
 
 header h1 {
