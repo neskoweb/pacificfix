@@ -373,19 +373,20 @@ nav ul li a:hover {
 
 /* Стили для главного раздела */
 #intro {
-    background: linear-gradient(45deg, #0d1b26, #737373);
+    background: #111821;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    padding: 60px 20px; /* Применяем те же отступы, что и у других секций */
-    margin: 20px auto; /* Центрирование секции */
-    max-width: 1100px; /* Ограничиваем ширину, как у других секций */
-    box-sizing: border-box; /* Включение padding и border в размер элемента */
-    border-radius: 12px; /* Скругленные углы */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Тень, как у других секций */
+    padding: 40px 20px;
+    margin: 10px auto 0;
+    max-width: 1100px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: none;
 }
 
 #intro nav {
