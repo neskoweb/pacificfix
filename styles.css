@@ -41,7 +41,7 @@ a {
 }
 
 .banner-header {
-    background: #0c1116;
+    background: #000000;
     padding: 14px 18px;
     border-bottom: 1px solid var(--border);
     display: flex;
