@@ -62,8 +62,8 @@ a {
 }
 
 #intro {
-    background: linear-gradient(180deg, #17212b 0%, #11161c 100%);
-    border: 1px solid var(--border);
+    background: #111821;
+    border: 1px solid rgba(245, 158, 11, 0.08);
     border-radius: 20px;
     box-shadow: var(--shadow);
     margin-top: 24px;
