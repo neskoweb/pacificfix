@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-    --bg: #0f141a;
-    --panel: #151b22;
-    --panel-2: #11161c;
-    --border: rgba(255, 255, 255, 0.08);
-    --text: #e6edf3;
-    --muted: #c9d4dd;
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --panel-2: #f1f3f5;
+    --border: #e5e7eb;
+    --text: #111827;
+    --muted: #667085;
     --accent: #f59e0b;
-    --accent-hover: #ffb020;
-    --shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    --accent-hover: #d97706;
+    --shadow: 0 4px 20px rgba(16, 24, 40, 0.06);
 }
 
 * {
@@ -465,24 +465,22 @@ section h2 {
 }
 
 /* Стиль для списка услуг */
-.service {
-    background: linear-gradient(45deg, #0d1b26, #737373);
-    margin: 30px 0;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.service-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(16, 24, 40, 0.09);
 }
 
-.service h3 {
-    font-size: 2em;
-    color: #fc8a00; /* Оранжево-красный для выделения */
-    margin-bottom: 15px;
+.service-card h3 {
+    color: var(--text);
 }
 
 .service ul {
