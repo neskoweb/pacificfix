@@ -308,8 +308,7 @@ section h2 {
 .services-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 20px;
 
@@ -317,6 +316,8 @@ section h2 {
 }
 
 .service-card {
+    min-width: 0;
+
     padding: 24px;
 
     background: var(--surface);
@@ -365,19 +366,20 @@ section h2 {
     border-radius: 3px;
 }
 
-.service-card ul {
+.service-card p {
     margin: 0;
-    padding-left: 18px;
 
     color: var(--text-secondary);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.service-card li {
-    margin-bottom: 9px;
-}
+.service-icon {
+    margin-bottom: 12px;
 
-.service-card li:last-child {
-    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 1;
 }
 
 
@@ -678,14 +680,14 @@ button.back-to-top:hover {
         font-size: 2.2rem;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
 
-    .service-card {
-        padding: 20px;
-    }
+.service-card {
+    padding: 20px;
+}
 
     .work-gallery {
         grid-template-columns: 1fr;
@@ -725,6 +727,9 @@ button.back-to-top:hover {
 
     section h2 {
         font-size: 1.9rem;
+    }    
+        .services-grid {
+    grid-template-columns: 1fr;
     }
 
     .top-nav ul,
