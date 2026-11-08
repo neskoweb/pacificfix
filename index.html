@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20261108_5">
+  <link rel="stylesheet" href="styles.css?v=20261108_6">
 
   <!-- LocalBusiness Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -955,7 +955,7 @@
 
   <!-- Interactive Portfolio Album Lightbox Modal -->
   <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Album Viewer">
-    <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+    <div class="lightbox-overlay"></div>
     <div class="lightbox-container">
       
       <!-- Top Bar: Album Title, Category & Controls -->
@@ -966,17 +966,17 @@
         </div>
         <div class="lightbox-controls">
           <span id="lightbox-counter" class="lightbox-counter">1 / 14</span>
-          <button id="lightbox-close" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close album viewer">&times;</button>
+          <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close album viewer">&times;</button>
         </div>
       </div>
 
       <!-- Main Stage: Image and Prev/Next Navigation -->
       <div class="lightbox-stage">
-        <button id="lightbox-prev" class="lightbox-nav-btn lightbox-nav-prev" onclick="showPrevPhoto()" aria-label="Previous photo">&#10094;</button>
+        <button id="lightbox-prev" class="lightbox-nav-btn lightbox-nav-prev" aria-label="Previous photo">&#10094;</button>
         <div class="lightbox-figure">
           <img id="lightbox-image" src="" alt="Portfolio Photo">
         </div>
-        <button id="lightbox-next" class="lightbox-nav-btn lightbox-nav-next" onclick="showNextPhoto()" aria-label="Next photo">&#10095;</button>
+        <button id="lightbox-next" class="lightbox-nav-btn lightbox-nav-next" aria-label="Next photo">&#10095;</button>
       </div>
 
       <!-- Photo Caption & Engineering Description -->
@@ -1010,6 +1010,6 @@
     <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
-  <script src="./script.js?v=20261108_5"></script>
+  <script src="./script.js?v=20261108_6"></script>
 </body>
 </html>

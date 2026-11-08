@@ -417,14 +417,26 @@ function updatePhotoView() {
   }
 }
 
-function showNextPhoto() {
+let lastNavTimestamp = 0;
+
+function showNextPhoto(e) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  const now = Date.now();
+  if (now - lastNavTimestamp < 150) return;
+  lastNavTimestamp = now;
+
   if (!currentAlbumKey || !portfolioData[currentAlbumKey]) return;
   const count = portfolioData[currentAlbumKey].photos.length;
   currentPhotoIndex = (currentPhotoIndex + 1) % count;
   updatePhotoView();
 }
 
-function showPrevPhoto() {
+function showPrevPhoto(e) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  const now = Date.now();
+  if (now - lastNavTimestamp < 150) return;
+  lastNavTimestamp = now;
+
   if (!currentAlbumKey || !portfolioData[currentAlbumKey]) return;
   const count = portfolioData[currentAlbumKey].photos.length;
   currentPhotoIndex = (currentPhotoIndex - 1 + count) % count;
