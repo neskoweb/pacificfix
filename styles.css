@@ -2325,6 +2325,29 @@ a.contact-channel-card:hover {
     grid-template-columns: 1fr;
   }
 
+  .footer-bottom {
+    padding: 20px 0 28px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .footer-subtext {
+    font-size: 0.74rem;
+    color: var(--text-light);
+  }
+
   .mobile-action-bar {
     display: flex;
   }
