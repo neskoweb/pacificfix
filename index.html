@@ -3,189 +3,759 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:image" content="https://raw.githubusercontent.com/neskoweb/pacificfix/main/magnet.jpg">
-  <title>Next Level Home Services</title>
+  <title>Next Level Home Services | Trusted Handyman in San Diego</title>
+  <meta name="description" content="Next Level Home Services - Reliable, high-quality handyman services in San Diego County. Electrical, plumbing, appliance installation, TV mounting, and smart home setup.">
+  <meta property="og:title" content="Next Level Home Services | Trusted Handyman in San Diego">
+  <meta property="og:description" content="Small repairs, installations, and maintenance with fast response throughout San Diego County. Engineering-level precision and dependable service.">
+  <meta property="og:image" content="./magnet.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="https://neskoweb.github.io/pacificfix/favicon.ico">
+
+  <!-- LocalBusiness Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Next Level Home Services",
+    "alternateName": "PacificFix",
+    "image": "https://neskoweb.github.io/pacificfix/logo.png",
+    "telephone": "+12067302055",
+    "email": "alex.ptrepair@gmail.com",
+    "url": "https://neskoweb.github.io/pacificfix/",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "San Diego County, CA"
+    },
+    "priceRange": "$$",
+    "description": "Professional handyman and home repair services in San Diego County. Electrical, plumbing, smart home installation, TV mounting, appliances."
+  }
+  </script>
 </head>
 <body>
 
-  <header class="banner-header">
-    <img src="https://neskoweb.github.io/pacificfix/logo.png" alt="Pacific Tech Repair banner" class="banner-img">
-  </header>
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement">
+    <div class="top-bar-inner">
+      <div class="top-bar-item">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span>Serving San Diego County &amp; Surrounding Areas</span>
+      </div>
+      <div class="top-bar-contacts">
+        <span class="response-badge">⚡ Fast Response Time</span>
+        <a href="tel:+12067302055" class="top-bar-phone">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (206) 730-2055
+        </a>
+      </div>
+    </div>
+  </aside>
 
-  <main>
-    <section id="intro" class="container intro-section">
-      <nav class="top-nav">
+  <!-- Sticky Modern Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="Next Level Home Services Home">
+        <img src="./logo.png" alt="Pacific Tech Repair / Next Level Home Services" class="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#about">About Alex</a></li>
+          <li><a href="#works">Our Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="intro-content">
-        <h2>Need a Reliable Handyman?</h2>
-        <p>
-          Small repairs, installations, and maintenance with fast response throughout San Diego County.
-        </p>
-        <a href="#contact" class="cta-button">Request a Service</a>
+      <div class="header-actions">
+        <a href="tel:+12067302055" class="btn-header-call" aria-label="Call (206) 730-2055">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>(206) 730-2055</span>
+        </a>
+        <a href="#contact" class="btn-primary btn-header-cta">Get an Estimate</a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
-    </section>
-
-<section id="services" class="container">
-  <h2>Our Services</h2>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <h3>Electrical</h3>
-      <p>Outlets, switches, light fixtures, ceiling fans, bathroom exhaust fans, troubleshooting, and small electrical repairs.</p>
     </div>
+  </header>
 
-    <div class="service-card">
-      <div class="service-icon">🚿</div>
-      <h3>Plumbing</h3>
-      <p>Faucets, shower faucets, toilets, leaks, cartridge replacements, and small plumbing repairs.</p>
-    </div>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🛠️</span>
+            <span>Professional Handyman • Engineering Precision</span>
+          </div>
 
-    <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h3>Appliance Installation & Repair</h3>
-      <p>Dishwashers, garbage disposals, ovens, ranges, microwaves, dryers, water filtration systems, and appliance repairs.</p>
-    </div>
+          <h1 class="hero-title">
+            Need a Reliable Handyman <span class="highlight">You Can Trust?</span>
+          </h1>
 
-    <div class="service-card">
-      <div class="service-icon">🛁</div>
-      <h3>Caulking & Sealing</h3>
-      <p>Bathroom and kitchen caulking, tubs, showers, sinks, countertops, and waterproof sealing.</p>
-    </div>
+          <p class="hero-subtitle">
+            Small repairs, installations, and maintenance with fast response throughout San Diego County. Done right the first time with honest pricing and clean workmanship.
+          </p>
 
-    <div class="service-card">
-      <div class="service-icon">📺</div>
-      <h3>TV Mounting & Furniture Assembly</h3>
-      <p>TVs, soundbars, shelves, cabinets, furniture, and other home installations and assembly.</p>
-    </div>
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn-primary btn-lg">
+              <span>Request a Service</span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="tel:+12067302055" class="btn-secondary btn-lg">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call (206) 730-2055</span>
+            </a>
+          </div>
 
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <h3>Smart Home Installation</h3>
-      <p>Smart doorbells, Ring cameras, smart locks, thermostats, and other smart home devices.</p>
-    </div>
-
-  </div>
-</section>
-
-    <section id="about" class="container">
-      <h2>About Us</h2>
-      <p class="about-text">
-  Hi, I’m Alex, the owner of Next Level Home Services.
-
-I started this business with one goal: to provide homeowners with reliable, high quality handyman services they can trust.
-
-With a degree in Electromechanical Engineering and years of hands on experience in residential and commercial maintenance, I bring a detail oriented, problem solving approach to every project. I believe in doing the job right the first time, communicating clearly, and treating every home with the same care and respect as if it were my own.
-
-Whether it’s a small repair, a new installation, or a larger home improvement project, you can expect honest recommendations, quality workmanship, and dependable service from start to finish.
-
-My goal is simple: to earn your trust and become the handyman you can rely on whenever you need help around your home.
-      </p>
-
-      <h3 class="works-title">Our Works</h3>
-      <div class="work-gallery">
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo1.JPEG" alt="Recessed lights installation" loading="lazy">
-          <p>Lighting Upgrade</p>
+          <div class="hero-features-strip">
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span>Fast Response</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span>Engineering Degree</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span>Quality Guaranteed</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span>Upfront Pricing</span>
+            </div>
+          </div>
         </div>
 
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo2.JPEG" alt="TV and soundbar installation" loading="lazy">
-          <p>TV Mounting</p>
-        </div>
+        <div class="hero-visual">
+          <div class="visual-wrapper">
+            <div class="visual-glow" aria-hidden="true"></div>
+            <img src="./handyman.png" alt="Alex - Next Level Home Services Handyman" class="hero-handyman-img">
+            
+            <!-- Floating Trust Badges -->
+            <div class="floating-badge badge-top-right">
+              <div class="floating-badge-icon pulse-icon">⚡</div>
+              <div class="floating-badge-text">
+                <strong>Electrical &amp; Plumbing</strong>
+                <span>Certified Precision</span>
+              </div>
+            </div>
 
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo3.JPEG" alt="Bathroom fan and light replacement" loading="lazy">
-          <p>Bath Fan Installation</p>
-        </div>
-
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo4.JPEG" alt="Smart thermostat installation" loading="lazy">
-          <p>Smart Thermostat</p>
-        </div>
-
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo5.JPEG" alt="Custom LED installation" loading="lazy">
-          <p>Custom LED Lighting</p>
-        </div>
-
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo6.JPEG" alt="Ring camera installation" loading="lazy">
-          <p>Security Camera Installation</p>
-        </div>
-
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo7.JPEG" alt="PTAC unit installation" loading="lazy">
-          <p>Appliance Installation</p>
-        </div>
-
-        <div class="work-item">
-          <img src="https://raw.githubusercontent.com/neskoweb/pacificfix/main/Photo8.JPEG" alt="Carpet replacement" loading="lazy">
-          <p>Flooring Upgrade</p>
+            <div class="floating-badge badge-bottom-left">
+              <div class="floating-badge-icon">⭐</div>
+              <div class="floating-badge-text">
+                <strong>Top Rated Handyman</strong>
+                <span>San Diego, CA</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <h2>Contact Us</h2>
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">What We Do</span>
+          <h2 class="section-title">Our Professional Services</h2>
+          <p class="section-desc">
+            Expert care for your home with precision and attention to detail. Select a service below to request a quick estimate.
+          </p>
+        </div>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
+        <div class="services-grid">
 
-        <p class="hidden-field">
-          <label>Do not fill this out if you are human: <input name="bot-field"></label>
-        </p>
+          <!-- Card 1: Electrical -->
+          <div class="service-card" data-service-type="Electrical">
+            <div class="service-icon-box icon-electrical">
+              <!-- Animated SVG Electric Bolt -->
+              <svg class="animated-service-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" class="svg-bg-circle" />
+                <path d="M35 12L17 34H33L29 52L47 30H31L35 12Z" class="svg-bolt" stroke="#f59e0b" stroke-width="2.5" fill="#fbbf24" stroke-linejoin="round" />
+                <circle cx="48" cy="18" r="2.5" class="svg-sparkle-1" fill="#f59e0b" />
+                <circle cx="16" cy="46" r="2" class="svg-sparkle-2" fill="#f59e0b" />
+              </svg>
+            </div>
+            <h3>Electrical</h3>
+            <p>Outlets, switches, light fixtures, ceiling fans, bathroom exhaust fans, troubleshooting, and small electrical repairs.</p>
+            <ul class="service-bullets">
+              <li>Recessed &amp; LED Lighting</li>
+              <li>Outlets, Switches &amp; Dimmers</li>
+              <li>Ceiling Fans &amp; Exhaust Fans</li>
+            </ul>
+            <a href="#contact" class="service-request-btn" data-service="Electrical">
+              <span>Book Electrical</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
 
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+          <!-- Card 2: Plumbing -->
+          <div class="service-card" data-service-type="Plumbing">
+            <div class="service-icon-box icon-plumbing">
+              <!-- Animated SVG Water Faucet / Drops -->
+              <svg class="animated-service-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" class="svg-bg-circle" />
+                <path d="M16 28H36C40.4183 28 44 31.5817 44 36V40" class="svg-pipe" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" />
+                <path d="M44 40H40V44H48V40H44Z" fill="#0ea5e9" />
+                <path d="M44 48C44 48 41 52 41 54C41 55.6569 42.3431 57 44 57C45.6569 57 47 55.6569 47 54C47 52 44 48 44 48Z" class="svg-water-drop" fill="#38bdf8" />
+                <path d="M22 22V28M30 22V28" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Plumbing</h3>
+            <p>Faucets, shower faucets, toilets, leaks, cartridge replacements, garbage disposal plumbing, and small plumbing repairs.</p>
+            <ul class="service-bullets">
+              <li>Faucets &amp; Shower Cartridges</li>
+              <li>Toilet Repairs &amp; Replacements</li>
+              <li>Leak Detection &amp; Fixes</li>
+            </ul>
+            <a href="#contact" class="service-request-btn" data-service="Plumbing">
+              <span>Book Plumbing</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
 
-        <label for="email">Your Email Address:</label>
-        <input type="email" id="email" name="email" required>
+          <!-- Card 3: Appliance Installation & Repair -->
+          <div class="service-card" data-service-type="Appliance Installation &amp; Repair">
+            <div class="service-icon-box icon-appliance">
+              <!-- Animated SVG Gears & Wrench -->
+              <svg class="animated-service-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" class="svg-bg-circle" />
+                <g class="svg-rotating-gear">
+                  <circle cx="32" cy="32" r="8" stroke="#6366f1" stroke-width="3" />
+                  <line x1="32" y1="18" x2="32" y2="23" stroke="#6366f1" stroke-width="3" stroke-linecap="round" />
+                  <line x1="32" y1="41" x2="32" y2="46" stroke="#6366f1" stroke-width="3" stroke-linecap="round" />
+                  <line x1="18" y1="32" x2="23" y2="32" stroke="#6366f1" stroke-width="3" stroke-linecap="round" />
+                  <line x1="41" y1="32" x2="46" y2="32" stroke="#6366f1" stroke-width="3" stroke-linecap="round" />
+                </g>
+                <path d="M20 44L44 20" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Appliance Installation &amp; Repair</h3>
+            <p>Dishwashers, garbage disposals, ovens, ranges, microwaves, dryers, water filtration systems, and appliance diagnostics.</p>
+            <ul class="service-bullets">
+              <li>Dishwashers &amp; Disposals</li>
+              <li>Ovens, Ranges &amp; Microwaves</li>
+              <li>Water Filtration Systems</li>
+            </ul>
+            <a href="#contact" class="service-request-btn" data-service="Appliance Installation">
+              <span>Book Appliance</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
 
-        <label for="phone">Your Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
+          <!-- Card 4: Caulking & Sealing -->
+          <div class="service-card" data-service-type="Caulking &amp; Sealing">
+            <div class="service-icon-box icon-caulking">
+              <!-- Animated SVG Waterproof Barrier -->
+              <svg class="animated-service-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" class="svg-bg-circle" />
+                <path d="M32 16L48 22V34C48 43.5 41 51.5 32 54C23 51.5 16 43.5 16 34V22L32 16Z" class="svg-shield" stroke="#10b981" stroke-width="2.5" fill="rgba(16, 185, 129, 0.12)" />
+                <path d="M25 34L30 39L40 29" class="svg-check" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Caulking &amp; Sealing</h3>
+            <p>Bathroom and kitchen caulking, tubs, showers, sinks, countertops, tile grout touch-ups, and silicone waterproof sealing.</p>
+            <ul class="service-bullets">
+              <li>Bathtub &amp; Shower Recaulking</li>
+              <li>Kitchen Countertops &amp; Sinks</li>
+              <li>Waterproof Mold-Resistant Seal</li>
+            </ul>
+            <a href="#contact" class="service-request-btn" data-service="Caulking &amp; Sealing">
+              <span>Book Caulking</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
 
-        <label for="message">What would you like help with?</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+          <!-- Card 5: TV Mounting & Furniture Assembly -->
+          <div class="service-card" data-service-type="TV Mounting &amp; Furniture Assembly">
+            <div class="service-icon-box icon-tv">
+              <!-- Animated SVG TV & Bracket -->
+              <svg class="animated-service-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" class="svg-bg-circle" />
+                <rect x="15" y="19" width="34" height="23" rx="3" class="svg-screen" stroke="#8b5cf6" stroke-width="2.5" fill="rgba(139, 92, 246, 0.12)" />
+                <path d="M24 48H40M32 42V48" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+                <circle cx="32" cy="30.5" r="3" fill="#a78bfa" class="svg-glow-dot" />
+              </svg>
+            </div>
+            <h3>TV Mounting &amp; Furniture Assembly</h3>
+            <p>Secure TV mounting on drywall, studs, brick or tile. Soundbars, shelves, floating cabinets, IKEA furniture, and gym setups.</p>
+            <ul class="service-bullets">
+              <li>All TV Sizes &amp; Soundbars</li>
+              <li>In-Wall Cable Concealment</li>
+              <li>Shelving, Cabinets &amp; Furniture</li>
+            </ul>
+            <a href="#contact" class="service-request-btn" data-service="TV Mounting &amp; Assembly">
+              <span>Book Mounting</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
 
-        <button type="submit">Send Request</button>
-      </form>
+          <!-- Card 6: Smart Home Installation -->
+          <div class="service-card" data-service-type="Smart Home Installation">
+            <div class="service-icon-box icon-smarthome">
+              <!-- Animated SVG Smart Home Signal -->
+              <svg class="animated-service-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" class="svg-bg-circle" />
+                <path d="M18 29L32 17L46 29V47H18V29Z" stroke="#ec4899" stroke-width="2.5" fill="rgba(236, 72, 153, 0.1)" stroke-linejoin="round" />
+                <path d="M27 38C27 38 29.5 35 32 35C34.5 35 37 38 37 38" class="svg-signal-1" stroke="#ec4899" stroke-width="2" stroke-linecap="round" />
+                <path d="M24 34C24 34 28 30 32 30C36 30 40 34 40 34" class="svg-signal-2" stroke="#ec4899" stroke-width="2" stroke-linecap="round" />
+                <circle cx="32" cy="42" r="2" fill="#ec4899" />
+              </svg>
+            </div>
+            <h3>Smart Home Installation</h3>
+            <p>Smart video doorbells, Ring cameras, Google Nest thermostats, keyless entry smart locks, and smart lighting setup.</p>
+            <ul class="service-bullets">
+              <li>Ring &amp; Nest Doorbells / Cameras</li>
+              <li>Smart Locks &amp; Thermostats</li>
+              <li>Wi-Fi &amp; Device Configuration</li>
+            </ul>
+            <a href="#contact" class="service-request-btn" data-service="Smart Home">
+              <span>Book Smart Home</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-card-profile">
+            <div class="profile-header">
+              <div class="profile-avatar-box">
+                <span class="avatar-letter">A</span>
+              </div>
+              <div class="profile-meta">
+                <h3>Alex</h3>
+                <p>Owner &amp; Lead Technician</p>
+                <div class="engineer-tag">
+                  <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                  <span>B.S. Electromechanical Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-quote">
+              <p>
+                "I believe in doing the job right the first time, communicating clearly, and treating every home with the same care and respect as if it were my own."
+              </p>
+            </div>
+
+            <div class="profile-commitments">
+              <div class="commitment-item">
+                <span class="icon-bullet">✔</span>
+                <span>Thorough diagnostics before starting work</span>
+              </div>
+              <div class="commitment-item">
+                <span class="icon-bullet">✔</span>
+                <span>Clean, spotless work areas and protective coverings</span>
+              </div>
+              <div class="commitment-item">
+                <span class="icon-bullet">✔</span>
+                <span>Clear upfront estimates with no hidden surprise fees</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-story">
+            <span class="section-tag">About Us</span>
+            <h2 class="section-title">Engineering Precision in Every Home Repair</h2>
+            <p class="about-lead">
+              Hi, I’m Alex, the owner of Next Level Home Services. I started this business with one straightforward goal: to provide homeowners with reliable, high-quality handyman services they can truly trust.
+            </p>
+            <p>
+              With a degree in Electromechanical Engineering and years of hands-on experience in residential and commercial maintenance, I bring a detail-oriented, problem-solving approach to every project. Rather than quick patches, I focus on lasting, safe, and clean solutions.
+            </p>
+            <p>
+              Whether it’s a minor repair, a new fixture installation, or a complete smart home upgrade, you can expect honest recommendations, quality workmanship, and dependable service from start to finish.
+            </p>
+
+            <div class="about-action">
+              <a href="#contact" class="btn-primary">Work with Alex</a>
+              <a href="tel:+12067302055" class="phone-link-styled">
+                <span>Direct line: (206) 730-2055</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works / Portfolio Gallery Section -->
+    <section id="works" class="section works-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Our Recent Works</h2>
+          <p class="section-desc">
+            Take a look at some of our completed repairs and installations. Click on any project to view high-resolution details.
+          </p>
+        </div>
+
+        <div class="work-gallery">
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View Recessed lighting upgrade photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo1.JPEG" alt="Recessed lights installation" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Lighting Upgrade</p>
+              <span class="work-category">Electrical</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View TV and soundbar installation photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo2.JPEG" alt="TV and soundbar installation" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>TV &amp; Soundbar Mounting</p>
+              <span class="work-category">Mounting &amp; Audio</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View Bathroom fan and light replacement photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo3.JPEG" alt="Bathroom fan and light replacement" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Bath Fan &amp; Light Installation</p>
+              <span class="work-category">Ventilation &amp; Electrical</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View Smart thermostat installation photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo4.JPEG" alt="Smart thermostat installation" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Smart Thermostat Setup</p>
+              <span class="work-category">Smart Home</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View Custom LED installation photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo5.JPEG" alt="Custom LED installation" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Custom Architectural LED Lighting</p>
+              <span class="work-category">Lighting Design</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View Ring camera installation photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo6.JPEG" alt="Ring camera installation" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Security Camera Installation</p>
+              <span class="work-category">Security</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View PTAC unit installation photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo7.JPEG" alt="PTAC unit installation" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Appliance &amp; AC Installation</p>
+              <span class="work-category">Appliance</span>
+            </div>
+          </div>
+
+          <div class="work-item" tabindex="0" role="button" aria-label="View Carpet replacement photo">
+            <div class="work-img-wrapper">
+              <img src="./Photo8.JPEG" alt="Carpet replacement" loading="lazy">
+              <div class="work-overlay">
+                <span class="zoom-icon">🔍</span>
+                <span class="zoom-label">View Project</span>
+              </div>
+            </div>
+            <div class="work-info">
+              <p>Flooring Upgrade</p>
+              <span class="work-category">Flooring</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Questions &amp; Answers</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Got questions about scheduling, pricing, or our coverage area? Here are the answers.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What areas do you serve in California?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We primarily serve homeowners and businesses throughout San Diego County, including North County, Central San Diego, and surrounding communities. If you're slightly outside, feel free to contact us — we may still be able to help!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How quickly can you schedule my repair?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We pride ourselves on fast response times. In many cases, we offer same-day or next-day appointments for urgent fixes, and we will always communicate expected arrival times clearly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Do I need to supply parts and materials myself?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>It's totally up to you! If you already have the fixture, faucet, TV mount, or smart lock, we are happy to install it. If not, we can recommend or supply high-quality hardware and standard materials for you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How do estimates work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Simply fill out our short contact form below or text a couple of photos and a description to <strong>(206) 730-2055</strong>. We will review it and provide a clear, upfront estimate with no surprise charges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-info-panel">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="contact-title">Let’s Fix It Right.</h2>
+            <p class="contact-lead">
+              Ready for dependable handyman services? Send us a message or call directly. We respond quickly.
+            </p>
+
+            <div class="contact-methods">
+              <a href="tel:+12067302055" class="contact-channel-card">
+                <div class="channel-icon-box">📞</div>
+                <div class="channel-details">
+                  <span class="channel-label">Call or Text</span>
+                  <strong class="channel-value">(206) 730-2055</strong>
+                  <span class="channel-sub">Direct contact with Alex</span>
+                </div>
+              </a>
+
+              <a href="mailto:alex.ptrepair@gmail.com" class="contact-channel-card">
+                <div class="channel-icon-box">✉️</div>
+                <div class="channel-details">
+                  <span class="channel-label">Email Us</span>
+                  <strong class="channel-value">alex.ptrepair@gmail.com</strong>
+                  <span class="channel-sub">Fast email response</span>
+                </div>
+              </a>
+
+              <div class="contact-channel-card non-clickable">
+                <div class="channel-icon-box">📍</div>
+                <div class="channel-details">
+                  <span class="channel-label">Service Area</span>
+                  <strong class="channel-value">San Diego County, CA</strong>
+                  <span class="channel-sub">Residential &amp; Commercial</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="guarantee-badge">
+              <div class="badge-shield">🛡️</div>
+              <p><strong>100% Workmanship Guarantee.</strong> We treat your home with care, respect, and meticulous craftsmanship.</p>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <h3 class="form-title">Request a Free Estimate</h3>
+            <p class="form-subtitle">Fill out the quick form and we will get back to you shortly.</p>
+
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="modern-form">
+              <input type="hidden" name="form-name" value="contact">
+
+              <p class="hidden-field">
+                <label>Do not fill this out if you are human: <input name="bot-field"></label>
+              </p>
+
+              <div class="form-group">
+                <label for="name">Your Full Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="(619) 000-0000" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service-type">Service Needed</label>
+                <select id="service-type" name="service" class="form-select">
+                  <option value="">Select a service category...</option>
+                  <option value="Electrical">Electrical (Lighting, Outlets, Fans)</option>
+                  <option value="Plumbing">Plumbing (Faucets, Toilets, Leaks)</option>
+                  <option value="Appliance Installation">Appliance Installation &amp; Repair</option>
+                  <option value="Caulking &amp; Sealing">Caulking &amp; Sealing (Bath, Kitchen)</option>
+                  <option value="TV Mounting &amp; Assembly">TV Mounting &amp; Furniture Assembly</option>
+                  <option value="Smart Home">Smart Home (Ring, Nest, Locks)</option>
+                  <option value="Other">Other Home Repair</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">What would you like help with? <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="4" placeholder="Briefly describe your project or repair needed..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary btn-submit">
+                <span>Send Request</span>
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Phone: <a href="tel:+12067302055">(206) 730-2055</a></p>
-    <p>Email: <a href="mailto:alex.ptrepair@gmail.com">alex.ptrepair@gmail.com</a></p>
+  <!-- Modern Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="./logo.png" alt="Pacific Tech Repair / Next Level Home Services" class="footer-logo">
+        <p class="footer-tagline">Reliable, high-quality handyman &amp; home improvement services throughout San Diego County.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Alex</a></li>
+            <li><a href="#works">Our Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Contact</h4>
+          <p>📞 Phone: <a href="tel:+12067302055">(206) 730-2055</a></p>
+          <p>✉️ Email: <a href="mailto:alex.ptrepair@gmail.com">alex.ptrepair@gmail.com</a></p>
+          <p>📍 Location: San Diego County, CA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Next Level Home Services (PacificFix). All rights reserved.</p>
+        <p class="footer-subtext">Quality Workmanship &amp; Engineering Precision.</p>
+      </div>
+    </div>
   </footer>
 
-  <button class="back-to-top" type="button" aria-label="Back to top">Back to Top</button>
+  <!-- Lightbox Modal for Photo Gallery -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Photo Viewer">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-btn lightbox-btn-close" aria-label="Close photo viewer">&times;</button>
+      <button id="lightbox-prev" class="lightbox-btn lightbox-btn-nav lightbox-btn-prev" aria-label="Previous photo">&#10094;</button>
+      
+      <div class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="Project Photo">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const backToTopButton = document.querySelector('.back-to-top');
+      <button id="lightbox-next" class="lightbox-btn lightbox-btn-nav lightbox-btn-next" aria-label="Next photo">&#10095;</button>
+    </div>
+  </div>
 
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-          backToTopButton.style.display = 'block';
-        } else {
-          backToTopButton.style.display = 'none';
-        }
-      });
+  <!-- Mobile Quick Action Floating Bar -->
+  <div class="mobile-action-bar" aria-label="Quick Actions">
+    <a href="tel:+12067302055" class="action-btn action-btn-call">
+      <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>Call Alex</span>
+    </a>
+    <a href="#contact" class="action-btn action-btn-quote">
+      <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      <span>Free Estimate</span>
+    </a>
+  </div>
 
-      backToTopButton.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
+  <!-- Back to top button -->
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 
+  <script src="./script.js"></script>
 </body>
 </html>
