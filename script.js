@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function () {
         serviceSelect.value = serviceName;
       }
       if (messageTextarea && !messageTextarea.value.trim()) {
-        messageTextarea.value = 'Hi Alex, I'd like an estimate for ' + serviceName + '. ';
+        messageTextarea.value = "Hi Alex, I'd like an estimate for " + serviceName + ". ";
       }
     });
   });
