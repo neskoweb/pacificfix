@@ -88,14 +88,14 @@ const portfolioData = {
       badgeClass: "badge-plumbing",
       photos: [
         {
-          src: "./portfolio/plumbing/plumbing-01.jpg",
-          title: "Before & After: Kitchen Sink & Faucet",
-          desc: "Full upgrade from worn stained basin to modern dual-bowl stainless steel sink with high-arc pull-down faucet."
-        },
-        {
           src: "./portfolio/plumbing/plumbing-03.jpg",
           title: "Horow Smart Bidet Toilet Installation",
           desc: "Luxury tankless smart toilet with integrated bidet, digital touchscreen display, and sealed flange on marble hexagon tile."
+        },
+        {
+          src: "./portfolio/plumbing/plumbing-01.jpg",
+          title: "Before & After: Kitchen Sink & Faucet",
+          desc: "Full upgrade from worn stained basin to modern dual-bowl stainless steel sink with high-arc pull-down faucet."
         },
         {
           src: "./portfolio/plumbing/plumbing-08.jpg",
@@ -192,6 +192,11 @@ const portfolioData = {
       badgeClass: "badge-caulking",
       photos: [
         {
+          src: "./portfolio/caulking/caulking-03.jpg",
+          title: "Marble Shower Bench Joint Sealing",
+          desc: "Immaculate crisp white silicone joint between solid quartz bench slab and polished marble wall tiles."
+        },
+        {
           src: "./portfolio/caulking/caulking-ba-faucet.jpg",
           title: "Before & After: Bathtub Spout Joint",
           desc: "Complete removal of failing moldy caulk, sanitary cleaning, and razor-sharp waterproof silicone bead tooling."
@@ -200,11 +205,6 @@ const portfolioData = {
           src: "./portfolio/caulking/caulking-ba-corner.jpg",
           title: "Before & After: Bathtub Wall Corner",
           desc: "Sealing old cracked corner gap with premium 100% mold-resistant silicone along acrylic tub and subway tile."
-        },
-        {
-          src: "./portfolio/caulking/caulking-03.jpg",
-          title: "Marble Shower Bench Joint Sealing",
-          desc: "Immaculate crisp white silicone joint between solid quartz bench slab and polished marble wall tiles."
         },
         {
           src: "./portfolio/caulking/caulking-04.jpg",
@@ -244,6 +244,11 @@ const portfolioData = {
       badgeClass: "badge-mounting",
       photos: [
         {
+          src: "./portfolio/tv-mounting/mounting-06.jpg",
+          title: "TV & Soundbar Mounting",
+          desc: "Centered dual mount for large LED TV with companion soundbar bracket and concealed in-wall cable kit."
+        },
+        {
           src: "./portfolio/tv-mounting/mounting-01.jpg",
           title: "75\" Flush TV & Console Setup",
           desc: "Ultra-slim low-profile wall mount into wooden wall studs with completely hidden cabling above media console."
@@ -272,11 +277,6 @@ const portfolioData = {
           src: "./portfolio/tv-mounting/mounting-05.jpg",
           title: "RealFlame Electric Fireplace Assembly",
           desc: "Complete structural assembly of decorative white wood mantel surround with built-in realistic flame heater."
-        },
-        {
-          src: "./portfolio/tv-mounting/mounting-06.jpg",
-          title: "TV & Soundbar Mounting",
-          desc: "Centered dual mount for large LED TV with companion soundbar bracket and concealed in-wall cable kit."
         }
       ]
     },
