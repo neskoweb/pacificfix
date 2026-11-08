@@ -609,26 +609,75 @@ button, input, select, textarea {
   animation: floatBadge 4s ease-in-out infinite alternate;
 }
 
-.badge-shoulder {
-  top: 50%;
+/* Desktop Orbit Positions (Scattered 3D Orbit Layout) */
+.badge-desktop-reviews {
+  top: 26%;
   right: -25px;
-  animation-delay: 0s;
+  animation: floatBadge1 4.5s ease-in-out infinite alternate;
 }
 
-@keyframes floatBadge {
+.badge-desktop-insurance {
+  top: 58%;
+  left: -28px;
+  animation: floatBadge2 5.2s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
+}
+
+.badge-desktop-owner {
+  bottom: 8px;
+  right: -15px;
+  animation: floatBadge3 4.8s ease-in-out infinite alternate;
+  animation-delay: 1.6s;
+}
+
+@keyframes floatBadge1 {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
+  100% { transform: translateY(-9px); }
+}
+
+@keyframes floatBadge2 {
+  0% { transform: translateY(0) rotate(-0.5deg); }
+  100% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+@keyframes floatBadge3 {
+  0% { transform: translateY(0) rotate(0.5deg); }
+  100% { transform: translateY(-8px) rotate(-0.5deg); }
+}
+
+.floating-badge {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-badge:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 32px -4px rgba(15, 23, 42, 0.16);
 }
 
 .floating-badge-icon {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  background: var(--accent-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.badge-icon-star {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.badge-icon-shield {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.badge-icon-owner {
+  background: #dcfce7;
+  color: #16a34a;
 }
 
 .floating-badge-text {
@@ -2044,8 +2093,8 @@ a.contact-channel-card:hover {
     display: none !important;
   }
 
-  /* Remove 250+ reviews floating badge on mobile */
-  .badge-shoulder {
+  /* Remove all desktop floating badges inside hero-visual on mobile */
+  .hero-visual .floating-badge {
     display: none !important;
   }
 
