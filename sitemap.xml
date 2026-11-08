@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://neskoweb.github.io/pacificfix/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://neskoweb.github.io/pacificfix/handyman.png</image:loc>
+      <image:title>Alex - Master Handyman at Next Level Home Services</image:title>
+      <image:caption>Professional handyman and residential installation specialist in San Diego</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://neskoweb.github.io/pacificfix/portfolio/electrical/electrical-05.jpg</image:loc>
+      <image:title>Electrical and Chandelier Installation San Diego</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neskoweb.github.io/pacificfix/portfolio/tv-mounting/mounting-01.jpg</image:loc>
+      <image:title>85 Inch TV Wall Mounting with Concealed In-Wall Wiring</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neskoweb.github.io/pacificfix/portfolio/appliances/appliance-01.jpg</image:loc>
+      <image:title>Kitchen Appliance and Cooktop Installation San Diego</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neskoweb.github.io/pacificfix/portfolio/caulking/caulking-ba-faucet.jpg</image:loc>
+      <image:title>Bathtub and Shower Silicone Re-caulking Waterproofing</image:title>
+    </image:image>
+  </url>
+</urlset>
