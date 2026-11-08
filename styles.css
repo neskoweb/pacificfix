@@ -405,7 +405,7 @@ button, input, select, textarea {
   display: contents;
 }
 
-.hero-mobile-review-badge {
+.hero-mobile-trust-stack {
   display: none;
 }
 
@@ -1900,7 +1900,7 @@ a.contact-channel-card:hover {
     width: 100%;
   }
 
-  /* Left column: Description lifted up + floating 250+ reviews badge */
+  /* Left column: Description lifted up + stacked 3 trust badges */
   .hero-left-col {
     grid-column: 1;
     grid-row: 3;
@@ -1908,54 +1908,74 @@ a.contact-channel-card:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
     height: 100%;
     padding-top: 2px;
   }
 
   .hero-subtitle {
-    font-size: 0.84rem;
-    line-height: 1.48;
+    font-size: 0.82rem;
+    line-height: 1.45;
     color: var(--text-muted);
     margin: 0;
     text-align: left;
   }
 
-  /* Floating/Levitating Reviews Badge under text */
-  .hero-mobile-review-badge {
+  /* Stack of 3 Trust Badges under text */
+  .hero-mobile-trust-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .hero-mobile-trust-item {
     display: inline-flex;
     align-items: center;
     gap: 7px;
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(245, 158, 11, 0.35);
-    border-radius: 10px;
-    padding: 5px 9px 5px 7px;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
-    animation: gentleFloat 3.5s ease-in-out infinite;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 9px;
+    padding: 4px 8px 4px 6px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+    animation: gentleFloat 4s ease-in-out infinite;
     width: fit-content;
     max-width: 100%;
-    margin-top: 2px;
+  }
+
+  .trust-item-reviews {
+    border-color: rgba(245, 158, 11, 0.35);
+    animation-delay: 0s;
+  }
+
+  .trust-item-insurance {
+    border-color: rgba(59, 130, 246, 0.3);
+    animation-delay: 0.4s;
+  }
+
+  .trust-item-owner {
+    border-color: rgba(16, 185, 129, 0.3);
+    animation-delay: 0.8s;
   }
 
   @keyframes gentleFloat {
     0%, 100% {
       transform: translateY(0);
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
     }
     50% {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 18px rgba(245, 158, 11, 0.18);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.1);
     }
   }
 
-  .badge-star-icon {
+  .trust-item-icon {
     width: 22px;
     height: 22px;
     font-size: 0.76rem;
-    background: #fef3c7;
-    color: #d97706;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1963,22 +1983,37 @@ a.contact-channel-card:hover {
     flex-shrink: 0;
   }
 
-  .badge-review-info {
+  .star-icon {
+    background: #fef3c7;
+    color: #d97706;
+  }
+
+  .shield-icon {
+    background: #dbeafe;
+    color: #2563eb;
+  }
+
+  .owner-icon {
+    background: #dcfce7;
+    color: #16a34a;
+  }
+
+  .trust-item-text {
     display: flex;
     flex-direction: column;
     text-align: left;
     line-height: 1.15;
   }
 
-  .badge-review-info strong {
-    font-size: 0.74rem;
+  .trust-item-text strong {
+    font-size: 0.72rem;
     font-weight: 800;
     color: var(--text-main);
     white-space: nowrap;
   }
 
-  .badge-review-info span {
-    font-size: 0.62rem;
+  .trust-item-text span {
+    font-size: 0.60rem;
     color: var(--text-muted);
     white-space: nowrap;
   }
@@ -2288,11 +2323,11 @@ a.contact-channel-card:hover {
     padding: 11px 16px;
   }
 
-  .badge-review-info strong {
-    font-size: 0.7rem;
+  .trust-item-text strong {
+    font-size: 0.68rem;
   }
 
-  .badge-review-info span {
-    font-size: 0.58rem;
+  .trust-item-text span {
+    font-size: 0.56rem;
   }
 }
