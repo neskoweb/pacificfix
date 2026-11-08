@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261108_3">
 
   <!-- LocalBusiness Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -476,7 +476,7 @@
         <div class="portfolio-albums-grid">
 
           <!-- Album 1: Electrical & Lighting -->
-          <div class="album-card" role="button" tabindex="0" data-album="electrical" aria-label="Open Electrical &amp; Lighting Album">
+          <div class="album-card" role="button" tabindex="0" data-album="electrical" onclick="openAlbum('electrical')" aria-label="Open Electrical &amp; Lighting Album">
             <div class="album-cover-wrap">
               <img src="./portfolio/electrical/electrical-05.jpg" alt="Electrical &amp; Lighting Projects" loading="lazy">
               <div class="album-badges">
@@ -494,13 +494,13 @@
               <h3>Electrical &amp; Lighting</h3>
               <p>Recessed LED downlights, chandeliers, under-cabinet lighting, ceiling fans &amp; wall sconces.</p>
               <div class="album-action-row">
-                <span class="album-open-link">Browse 14 Photos &rarr;</span>
+                <span class="album-open-link" onclick="openAlbum('electrical')">Browse 14 Photos &rarr;</span>
               </div>
             </div>
           </div>
 
           <!-- Album 2: Plumbing Services -->
-          <div class="album-card" role="button" tabindex="0" data-album="plumbing" aria-label="Open Plumbing Services Album">
+          <div class="album-card" role="button" tabindex="0" data-album="plumbing" onclick="openAlbum('plumbing')" aria-label="Open Plumbing Services Album">
             <div class="album-cover-wrap">
               <img src="./portfolio/plumbing/plumbing-01.jpg" alt="Plumbing Services Projects" loading="lazy">
               <div class="album-badges">
@@ -518,13 +518,13 @@
               <h3>Plumbing Services</h3>
               <p>Kitchen sinks, smart bidet toilets, Waterdrop RO filtration systems, faucets &amp; disposals.</p>
               <div class="album-action-row">
-                <span class="album-open-link">Browse 8 Photos &rarr;</span>
+                <span class="album-open-link" onclick="openAlbum('plumbing')">Browse 8 Photos &rarr;</span>
               </div>
             </div>
           </div>
 
           <!-- Album 3: Appliance Installation & Repair -->
-          <div class="album-card" role="button" tabindex="0" data-album="appliances" aria-label="Open Appliance Installation Album">
+          <div class="album-card" role="button" tabindex="0" data-album="appliances" onclick="openAlbum('appliances')" aria-label="Open Appliance Installation Album">
             <div class="album-cover-wrap">
               <img src="./portfolio/appliances/appliance-01.jpg" alt="Appliance Installation Projects" loading="lazy">
               <div class="album-badges">
@@ -542,13 +542,13 @@
               <h3>Appliance Installation</h3>
               <p>Built-in dishwashers, U-shaped &amp; window ACs, garbage disposals, electric cooktops &amp; vents.</p>
               <div class="album-action-row">
-                <span class="album-open-link">Browse 10 Photos &rarr;</span>
+                <span class="album-open-link" onclick="openAlbum('appliances')">Browse 10 Photos &rarr;</span>
               </div>
             </div>
           </div>
 
           <!-- Album 4: Silicone & Caulking -->
-          <div class="album-card" role="button" tabindex="0" data-album="caulking" aria-label="Open Silicone &amp; Caulking Album">
+          <div class="album-card" role="button" tabindex="0" data-album="caulking" onclick="openAlbum('caulking')" aria-label="Open Silicone &amp; Caulking Album">
             <div class="album-cover-wrap">
               <img src="./portfolio/caulking/caulking-ba-faucet.jpg" alt="Silicone &amp; Caulking Projects" loading="lazy">
               <div class="album-badges">
@@ -566,13 +566,13 @@
               <h3>Silicone &amp; Caulking</h3>
               <p>Bathtub recaulking, shower tile seams, linear drains, quartz benches &amp; waterproof sealing.</p>
               <div class="album-action-row">
-                <span class="album-open-link">Browse 9 Photos &rarr;</span>
+                <span class="album-open-link" onclick="openAlbum('caulking')">Browse 9 Photos &rarr;</span>
               </div>
             </div>
           </div>
 
           <!-- Album 5: TV Mounting & Assembly -->
-          <div class="album-card" role="button" tabindex="0" data-album="tv-mounting" aria-label="Open TV Mounting &amp; Assembly Album">
+          <div class="album-card" role="button" tabindex="0" data-album="tv-mounting" onclick="openAlbum('tv-mounting')" aria-label="Open TV Mounting &amp; Assembly Album">
             <div class="album-cover-wrap">
               <img src="./portfolio/tv-mounting/mounting-01.jpg" alt="TV Mounting &amp; Assembly Projects" loading="lazy">
               <div class="album-badges">
@@ -590,13 +590,13 @@
               <h3>TV Mounting &amp; Assembly</h3>
               <p>OLED/Frame TV flush mounting, in-wall Legrand boxes, floating shelves &amp; fireplace assembly.</p>
               <div class="album-action-row">
-                <span class="album-open-link">Browse 7 Photos &rarr;</span>
+                <span class="album-open-link" onclick="openAlbum('tv-mounting')">Browse 7 Photos &rarr;</span>
               </div>
             </div>
           </div>
 
           <!-- Album 6: Smart Home & Everyday Handyman -->
-          <div class="album-card" role="button" tabindex="0" data-album="smart-home" aria-label="Open Smart Home &amp; Everyday Handyman Album">
+          <div class="album-card" role="button" tabindex="0" data-album="smart-home" onclick="openAlbum('smart-home')" aria-label="Open Smart Home &amp; Everyday Handyman Album">
             <div class="album-cover-wrap">
               <img src="./portfolio/smart-home/smarthome-01.jpg" alt="Smart Home &amp; Everyday Handyman Projects" loading="lazy">
               <div class="album-badges">
@@ -614,7 +614,7 @@
               <h3>Smart Home &amp; Handyman</h3>
               <p>Ecobee thermostats, Ring security cameras, designer mirrors, cabinet hardware &amp; hooks.</p>
               <div class="album-action-row">
-                <span class="album-open-link">Browse 7 Photos &rarr;</span>
+                <span class="album-open-link" onclick="openAlbum('smart-home')">Browse 7 Photos &rarr;</span>
               </div>
             </div>
           </div>
@@ -955,7 +955,7 @@
 
   <!-- Interactive Portfolio Album Lightbox Modal -->
   <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Album Viewer">
-    <div class="lightbox-overlay"></div>
+    <div class="lightbox-overlay" onclick="closeLightbox()"></div>
     <div class="lightbox-container">
       
       <!-- Top Bar: Album Title, Category & Controls -->
@@ -966,17 +966,17 @@
         </div>
         <div class="lightbox-controls">
           <span id="lightbox-counter" class="lightbox-counter">1 / 14</span>
-          <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close album viewer">&times;</button>
+          <button id="lightbox-close" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close album viewer">&times;</button>
         </div>
       </div>
 
       <!-- Main Stage: Image and Prev/Next Navigation -->
       <div class="lightbox-stage">
-        <button id="lightbox-prev" class="lightbox-nav-btn lightbox-nav-prev" aria-label="Previous photo">&#10094;</button>
+        <button id="lightbox-prev" class="lightbox-nav-btn lightbox-nav-prev" onclick="showPrevPhoto()" aria-label="Previous photo">&#10094;</button>
         <div class="lightbox-figure">
           <img id="lightbox-image" src="" alt="Portfolio Photo">
         </div>
-        <button id="lightbox-next" class="lightbox-nav-btn lightbox-nav-next" aria-label="Next photo">&#10095;</button>
+        <button id="lightbox-next" class="lightbox-nav-btn lightbox-nav-next" onclick="showNextPhoto()" aria-label="Next photo">&#10095;</button>
       </div>
 
       <!-- Photo Caption & Engineering Description -->
@@ -1010,6 +1010,6 @@
     <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
-  <script src="./script.js"></script>
+  <script src="./script.js?v=20261108_3"></script>
 </body>
 </html>

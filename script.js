@@ -3,62 +3,8 @@
  * Modern Interactive Frontend Logic
  */
 
-document.addEventListener('DOMContentLoaded', function () {
-  // 1. Mobile Navigation Toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
-  const mainNav = document.querySelector('.main-nav');
-
-  if (mobileMenuBtn && mainNav) {
-    mobileMenuBtn.addEventListener('click', function () {
-      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-      mainNav.classList.toggle('nav-open');
-    });
-
-    // Close menu when clicking navigation links
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        mainNav.classList.remove('nav-open');
-      });
-    });
-  }
-
-  // 2. Service Card "Request This Service" Handlers
-  const serviceButtons = document.querySelectorAll('.service-request-btn');
-  const serviceSelect = document.getElementById('service-type');
-  const messageTextarea = document.getElementById('message');
-
-  serviceButtons.forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      const serviceName = this.getAttribute('data-service');
-      if (serviceSelect && serviceName) {
-        serviceSelect.value = serviceName;
-      }
-      if (messageTextarea && !messageTextarea.value.trim()) {
-        messageTextarea.value = `Hi Alex, I'd like an estimate for ${serviceName}. `;
-      }
-    });
-  });
-
-  // 3. Interactive FAQ Accordion
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    if (questionBtn) {
-      questionBtn.addEventListener('click', () => {
-        const isOpen = item.classList.contains('active');
-        // Close other items
-        faqItems.forEach(other => {
-          if (other !== item) other.classList.remove('active');
-        });
-        item.classList.toggle('active', !isOpen);
-      });
-    }
-  });
-
-  // 4. Interactive 6-Album Portfolio System
-  const portfolioData = {
+// 1. GLOBAL PORTFOLIO DATA (All 6 Albums, 54 verified photos)
+const portfolioData = {
     electrical: {
       title: "Electrical & Lighting",
       badge: "⚡ Electrical",
@@ -378,123 +324,200 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  let currentAlbumKey = null;
-  let currentPhotoIndex = 0;
+// 2. PORTFOLIO STATE & VIEWER FUNCTIONS (Global scope for 100% reliability)
+let currentAlbumKey = null;
+let currentPhotoIndex = 0;
 
-  const lightbox = document.getElementById('lightbox-modal');
-  const lightboxAlbumTitle = document.getElementById('lightbox-album-title');
-  const lightboxBadge = document.getElementById('lightbox-badge');
-  const lightboxCounter = document.getElementById('lightbox-counter');
-  const lightboxImg = document.getElementById('lightbox-image');
-  const lightboxCaptionTitle = document.getElementById('lightbox-caption-title');
-  const lightboxCaptionDesc = document.getElementById('lightbox-caption-desc');
-  const lightboxThumbsStrip = document.getElementById('lightbox-thumbnails');
-  const lightboxClose = document.getElementById('lightbox-close');
-  const lightboxPrev = document.getElementById('lightbox-prev');
-  const lightboxNext = document.getElementById('lightbox-next');
+function openAlbum(albumKey, startIndex) {
+  if (typeof startIndex === 'undefined') startIndex = 0;
+  const modal = document.getElementById('lightbox-modal');
+  if (!modal || !portfolioData || !portfolioData[albumKey]) {
+    console.warn('Album not found or data missing:', albumKey);
+    return;
+  }
+  currentAlbumKey = albumKey;
+  currentPhotoIndex = startIndex;
+  renderThumbnails();
+  updatePhotoView();
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
 
-  // Album card click listeners
-  document.querySelectorAll('.album-card').forEach((card) => {
-    const albumKey = card.getAttribute('data-album');
-    card.addEventListener('click', (e) => {
-      e.preventDefault();
-      openAlbum(albumKey, 0);
+function closeLightbox() {
+  const modal = document.getElementById('lightbox-modal');
+  if (!modal) return;
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function renderThumbnails() {
+  const thumbsStrip = document.getElementById('lightbox-thumbnails');
+  if (!thumbsStrip || !currentAlbumKey) return;
+  const album = portfolioData[currentAlbumKey];
+  thumbsStrip.innerHTML = '';
+  album.photos.forEach((photo, idx) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'thumb-item ' + (idx === currentPhotoIndex ? 'active' : '');
+    thumb.setAttribute('tabindex', '0');
+    thumb.setAttribute('aria-label', 'Thumbnail ' + (idx + 1) + ': ' + photo.title);
+    thumb.innerHTML = '<img src="' + photo.src + '" alt="' + photo.title + '">';
+    thumb.onclick = function (e) {
+      e.stopPropagation();
+      currentPhotoIndex = idx;
+      updatePhotoView();
+    };
+    thumbsStrip.appendChild(thumb);
+  });
+}
+
+function updatePhotoView() {
+  if (!currentAlbumKey || !portfolioData[currentAlbumKey]) return;
+  const album = portfolioData[currentAlbumKey];
+  const photo = album.photos[currentPhotoIndex];
+  if (!photo) return;
+
+  const albumTitleEl = document.getElementById('lightbox-album-title');
+  const badgeEl = document.getElementById('lightbox-badge');
+  const counterEl = document.getElementById('lightbox-counter');
+  const imgEl = document.getElementById('lightbox-image');
+  const capTitleEl = document.getElementById('lightbox-caption-title');
+  const capDescEl = document.getElementById('lightbox-caption-desc');
+  const thumbsStrip = document.getElementById('lightbox-thumbnails');
+
+  if (albumTitleEl) albumTitleEl.textContent = album.title;
+  if (badgeEl) {
+    badgeEl.textContent = album.badge;
+    badgeEl.className = 'lightbox-category-badge ' + album.badgeClass;
+  }
+  if (counterEl) {
+    counterEl.textContent = (currentPhotoIndex + 1) + ' / ' + album.photos.length;
+  }
+
+  if (imgEl) {
+    imgEl.src = photo.src;
+    imgEl.alt = photo.title;
+    imgEl.style.opacity = '1';
+  }
+
+  if (capTitleEl) capTitleEl.textContent = photo.title;
+  if (capDescEl) capDescEl.textContent = photo.desc;
+
+  // Update active thumbnail
+  if (thumbsStrip) {
+    const thumbs = thumbsStrip.querySelectorAll('.thumb-item');
+    thumbs.forEach((t, i) => {
+      t.classList.toggle('active', i === currentPhotoIndex);
     });
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openAlbum(albumKey, 0);
+    const activeThumb = thumbs[currentPhotoIndex];
+    if (activeThumb && typeof activeThumb.scrollIntoView === 'function') {
+      activeThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  }
+}
+
+function showNextPhoto() {
+  if (!currentAlbumKey || !portfolioData[currentAlbumKey]) return;
+  const count = portfolioData[currentAlbumKey].photos.length;
+  currentPhotoIndex = (currentPhotoIndex + 1) % count;
+  updatePhotoView();
+}
+
+function showPrevPhoto() {
+  if (!currentAlbumKey || !portfolioData[currentAlbumKey]) return;
+  const count = portfolioData[currentAlbumKey].photos.length;
+  currentPhotoIndex = (currentPhotoIndex - 1 + count) % count;
+  updatePhotoView();
+}
+
+// Global exposure for inline onclick attributes and debugging
+window.portfolioData = portfolioData;
+window.openAlbum = openAlbum;
+window.closeLightbox = closeLightbox;
+window.showNextPhoto = showNextPhoto;
+window.showPrevPhoto = showPrevPhoto;
+
+// Universal document click delegation: clicking ANY album card opens it
+document.addEventListener('click', function (e) {
+  const card = e.target.closest('.album-card');
+  if (card) {
+    const key = card.getAttribute('data-album');
+    if (key) {
+      openAlbum(key, 0);
+    }
+  }
+});
+
+// 3. DOMCONTENTLOADED EVENT LISTENERS (UI Controls & Navigation)
+document.addEventListener('DOMContentLoaded', function () {
+  // Mobile Navigation Toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  if (mobileMenuBtn && mainNav) {
+    mobileMenuBtn.addEventListener('click', function () {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('nav-open');
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('nav-open');
+      });
+    });
+  }
+
+  // Service Card "Request This Service" Handlers
+  const serviceButtons = document.querySelectorAll('.service-request-btn');
+  const serviceSelect = document.getElementById('service-type');
+  const messageTextarea = document.getElementById('message');
+
+  serviceButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const serviceName = this.getAttribute('data-service');
+      if (serviceSelect && serviceName) {
+        serviceSelect.value = serviceName;
+      }
+      if (messageTextarea && !messageTextarea.value.trim()) {
+        messageTextarea.value = 'Hi Alex, I'd like an estimate for ' + serviceName + '. ';
       }
     });
   });
 
-  function openAlbum(albumKey, startIndex = 0) {
-    if (!lightbox || !portfolioData[albumKey]) return;
-    currentAlbumKey = albumKey;
-    currentPhotoIndex = startIndex;
-    renderThumbnails();
-    updatePhotoView();
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  function renderThumbnails() {
-    if (!lightboxThumbsStrip || !currentAlbumKey) return;
-    const album = portfolioData[currentAlbumKey];
-    lightboxThumbsStrip.innerHTML = '';
-    album.photos.forEach((photo, idx) => {
-      const thumb = document.createElement('div');
-      thumb.className = `thumb-item ${idx === currentPhotoIndex ? 'active' : ''}`;
-      thumb.setAttribute('tabindex', '0');
-      thumb.setAttribute('aria-label', `Thumbnail ${idx + 1}: ${photo.title}`);
-      thumb.innerHTML = `<img src="${photo.src}" alt="${photo.title}">`;
-      thumb.addEventListener('click', () => {
-        currentPhotoIndex = idx;
-        updatePhotoView();
+  // Interactive FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        faqItems.forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+        item.classList.toggle('active', !isOpen);
       });
-      lightboxThumbsStrip.appendChild(thumb);
-    });
-  }
-
-  function updatePhotoView() {
-    if (!currentAlbumKey || !portfolioData[currentAlbumKey]) return;
-    const album = portfolioData[currentAlbumKey];
-    const photo = album.photos[currentPhotoIndex];
-    if (!photo) return;
-
-    if (lightboxAlbumTitle) lightboxAlbumTitle.textContent = album.title;
-    if (lightboxBadge) {
-      lightboxBadge.textContent = album.badge;
-      lightboxBadge.className = `lightbox-category-badge ${album.badgeClass}`;
     }
-    if (lightboxCounter) {
-      lightboxCounter.textContent = `${currentPhotoIndex + 1} / ${album.photos.length}`;
-    }
+  });
 
-    if (lightboxImg) {
-      lightboxImg.style.opacity = '0.3';
-      lightboxImg.src = photo.src;
-      lightboxImg.alt = photo.title;
-      lightboxImg.onload = () => {
-        lightboxImg.style.opacity = '1';
-      };
-    }
-
-    if (lightboxCaptionTitle) lightboxCaptionTitle.textContent = photo.title;
-    if (lightboxCaptionDesc) lightboxCaptionDesc.textContent = photo.desc;
-
-    // Update active thumb
-    if (lightboxThumbsStrip) {
-      const thumbs = lightboxThumbsStrip.querySelectorAll('.thumb-item');
-      thumbs.forEach((t, i) => {
-        t.classList.toggle('active', i === currentPhotoIndex);
-      });
-      const activeThumb = thumbs[currentPhotoIndex];
-      if (activeThumb) {
-        activeThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  // Keyboard navigation for album cards (Enter / Space)
+  document.querySelectorAll('.album-card').forEach((card) => {
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const key = card.getAttribute('data-album');
+        if (key) openAlbum(key, 0);
       }
-    }
-  }
+    });
+  });
 
-  function showNextPhoto() {
-    if (!currentAlbumKey) return;
-    const count = portfolioData[currentAlbumKey].photos.length;
-    currentPhotoIndex = (currentPhotoIndex + 1) % count;
-    updatePhotoView();
-  }
-
-  function showPrevPhoto() {
-    if (!currentAlbumKey) return;
-    const count = portfolioData[currentAlbumKey].photos.length;
-    currentPhotoIndex = (currentPhotoIndex - 1 + count) % count;
-    updatePhotoView();
-  }
+  // Lightbox Modal Controls
+  const lightbox = document.getElementById('lightbox-modal');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightboxNext) lightboxNext.addEventListener('click', showNextPhoto);
@@ -508,15 +531,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Keyboard navigation
+  // Keyboard navigation for open lightbox
   document.addEventListener('keydown', (e) => {
-    if (!lightbox || !lightbox.classList.contains('active')) return;
+    const modal = document.getElementById('lightbox-modal');
+    if (!modal || !modal.classList.contains('active')) return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight') showNextPhoto();
     if (e.key === 'ArrowLeft') showPrevPhoto();
   });
 
-  // Mobile Touch Swipe support
+  // Mobile Touch Swipe support on Lightbox stage
   let touchStartX = 0;
   let touchEndX = 0;
   const stage = document.querySelector('.lightbox-stage');
@@ -526,29 +550,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { passive: true });
     stage.addEventListener('touchend', (e) => {
       touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 45) {
+        if (diff < 0) {
+          showNextPhoto();
+        } else {
+          showPrevPhoto();
+        }
+      }
     }, { passive: true });
   }
 
-  function handleSwipe() {
-    const diff = touchEndX - touchStartX;
-    if (Math.abs(diff) > 45) {
-      if (diff < 0) {
-        showNextPhoto();
-      } else {
-        showPrevPhoto();
-      }
-    }
-  }
-
-  // 5. Back to Top Button & Sticky Nav Scroll State
+  // Back to Top Button & Sticky Nav Scroll State
   const backToTopBtn = document.querySelector('.back-to-top');
   const header = document.querySelector('.site-header');
 
   window.addEventListener('scroll', function () {
     const scrollY = window.scrollY;
-
-    // Header shadow on scroll
     if (header) {
       if (scrollY > 20) {
         header.classList.add('header-scrolled');
@@ -556,8 +574,6 @@ document.addEventListener('DOMContentLoaded', function () {
         header.classList.remove('header-scrolled');
       }
     }
-
-    // Back to top visibility
     if (backToTopBtn) {
       if (scrollY > 400) {
         backToTopBtn.classList.add('visible');

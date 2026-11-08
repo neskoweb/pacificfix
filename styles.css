@@ -1149,6 +1149,9 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   position: relative;
+  -webkit-tap-highlight-color: rgba(245, 158, 11, 0.2);
+  touch-action: manipulation;
+  user-select: none;
 }
 
 .album-card:hover {
@@ -1407,11 +1410,11 @@ button, input, select, textarea {
    INTERACTIVE ALBUM LIGHTBOX MODAL
    ========================================================================== */
 .lightbox-modal {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1200;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
   display: none;
   align-items: center;
   justify-content: center;
@@ -1419,7 +1422,10 @@ button, input, select, textarea {
 }
 
 .lightbox-modal.active {
-  display: flex;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .lightbox-overlay {
