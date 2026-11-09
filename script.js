@@ -339,6 +339,31 @@ const portfolioData = {
           src: "./portfolio/smart-home/handyman-01.jpg",
           title: "Flooring Transition & Trim Upgrade",
           desc: "Seamless threshold and baseboard transition between hardwood and newly laid carpeting."
+        },
+        {
+          src: "./portfolio/smart-home/smarthome-03.jpg",
+          title: "Reolink Dual-Lens Floodlight Security Camera",
+          desc: "Exterior brick masonry mounting of panoramic dual-lens 180-degree smart floodlight camera with motion-triggered LEDs."
+        },
+        {
+          src: "./portfolio/smart-home/smarthome-04.jpg",
+          title: "Reolink PoE Turret Dome Camera Installation",
+          desc: "Clean ceiling-mounted PoE security camera with concealed Cat6 wiring above entry door for 24/7 high-definition perimeter monitoring."
+        },
+        {
+          src: "./portfolio/smart-home/smarthome-06.jpg",
+          title: "Ring Video Doorbell Masonry Installation",
+          desc: "Venetian bronze Ring smart video doorbell securely anchored to exterior brick entryway with low-voltage chime wiring and smartphone alerts."
+        },
+        {
+          src: "./portfolio/smart-home/smarthome-05.jpg",
+          title: "Whole-Home NVR Surveillance Setup & Calibration",
+          desc: "Structured media panel installation with PoE network video recorder (NVR), Cat6 routing, and 16-channel camera calibration for full-property security coverage."
+        },
+        {
+          src: "./portfolio/smart-home/handyman-06.jpg",
+          title: "Retractable Double French Patio Screen Door",
+          desc: "Custom-fitted sliding retractable mosquito mesh screen door installed on backyard exit doors for continuous fresh air flow and insect protection."
         }
       ]
     }
