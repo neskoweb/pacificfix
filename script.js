@@ -79,6 +79,26 @@ const portfolioData = {
           src: "./Photo1.JPEG",
           title: "Kitchen Recessed Can Light Upgrade",
           desc: "Replacement of outdated ceiling fixtures with bright, energy-efficient 3000K recessed LED retrofits."
+        },
+        {
+          src: "./portfolio/electrical/electrical-15.jpg",
+          title: "Walnut & Matte Black Dual-Ring LED Pendant",
+          desc: "Contemporary suspended circular LED chandelier with wood-grain outer ring and precision-balanced 3-cable ceiling canopy."
+        },
+        {
+          src: "./portfolio/electrical/electrical-16.jpg",
+          title: "Tiered Coastal Fringe Flush-Mount Chandelier",
+          desc: "Artisanal multi-tier woven and wood-drop drum ceiling fixture casting warm patterned ambient light in nursery bedroom."
+        },
+        {
+          src: "./portfolio/electrical/electrical-17.jpg",
+          title: "6-Light Linear Matte Black Cage Chandelier",
+          desc: "Modern farmhouse open-frame rectangular dining pendant with dual chain suspension and warm filament Edison LED bulbs."
+        },
+        {
+          src: "./portfolio/electrical/electrical-18.jpg",
+          title: "Dual LED Backlit & Front-Lit Vanity Mirrors",
+          desc: "Hardwired installation of twin smart illuminated bathroom mirrors with touch dimmer controls, anti-fog heating, and perimeter halo glow."
         }
       ]
     },
