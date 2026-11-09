@@ -316,31 +316,6 @@ const portfolioData = {
           desc: "Exterior junction box mounting with weatherproof conduit and motion-activated security camera setup."
         },
         {
-          src: "./portfolio/smart-home/handyman-03.jpg",
-          title: "Designer Entryway Mirror & Sconces",
-          desc: "Precision heavy-mirror anchor installation flanked by matching marble and brass wall lighting fixtures."
-        },
-        {
-          src: "./portfolio/smart-home/handyman-02.jpg",
-          title: "Cabinet Hardware & Matte Black Hooks",
-          desc: "Template-drilled cabinet bar pulls and laser-aligned row of heavy-duty coat and backpack hooks."
-        },
-        {
-          src: "./portfolio/smart-home/handyman-04.jpg",
-          title: "Minimalist Brass Wall Peg Hooks",
-          desc: "Modern architectural solid brass wall pegs anchored into wall studs along sunlit hallway alcove."
-        },
-        {
-          src: "./portfolio/smart-home/handyman-05.jpg",
-          title: "Mid-Century Modern Art Coat Rack",
-          desc: "Multi-point geometric wall sculpture installation with brass peg ends beneath sphere sconce light."
-        },
-        {
-          src: "./portfolio/smart-home/handyman-01.jpg",
-          title: "Flooring Transition & Trim Upgrade",
-          desc: "Seamless threshold and baseboard transition between hardwood and newly laid carpeting."
-        },
-        {
           src: "./portfolio/smart-home/smarthome-03.jpg",
           title: "Reolink Dual-Lens Floodlight Security Camera",
           desc: "Exterior brick masonry mounting of panoramic dual-lens 180-degree smart floodlight camera with motion-triggered LEDs."
@@ -364,6 +339,31 @@ const portfolioData = {
           src: "./portfolio/smart-home/handyman-06.jpg",
           title: "Retractable Double French Patio Screen Door",
           desc: "Custom-fitted sliding retractable mosquito mesh screen door installed on backyard exit doors for continuous fresh air flow and insect protection."
+        },
+        {
+          src: "./portfolio/smart-home/handyman-03.jpg",
+          title: "Designer Entryway Mirror & Sconces",
+          desc: "Precision heavy-mirror anchor installation flanked by matching marble and brass wall lighting fixtures."
+        },
+        {
+          src: "./portfolio/smart-home/handyman-02.jpg",
+          title: "Cabinet Hardware & Matte Black Hooks",
+          desc: "Template-drilled cabinet bar pulls and laser-aligned row of heavy-duty coat and backpack hooks."
+        },
+        {
+          src: "./portfolio/smart-home/handyman-04.jpg",
+          title: "Minimalist Brass Wall Peg Hooks",
+          desc: "Modern architectural solid brass wall pegs anchored into wall studs along sunlit hallway alcove."
+        },
+        {
+          src: "./portfolio/smart-home/handyman-05.jpg",
+          title: "Mid-Century Modern Art Coat Rack",
+          desc: "Multi-point geometric wall sculpture installation with brass peg ends beneath sphere sconce light."
+        },
+        {
+          src: "./portfolio/smart-home/handyman-01.jpg",
+          title: "Flooring Transition & Trim Upgrade",
+          desc: "Seamless threshold and baseboard transition between hardwood and newly laid carpeting."
         }
       ]
     }
